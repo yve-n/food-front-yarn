@@ -1,12 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-resto-list',
+  templateUrl: './resto-list.component.html',
+  styleUrls: ['./resto-list.component.scss']
 })
-export class AppComponent {
-  title = 'food-app';
+export class RestoListComponent implements OnInit {
+
+  @Input() name: string;
+  @Input() adresse: string;
+  @Input() logo: string;
+  @Input() duree_livraison: string;
+
+  // @Input() list_resto;
 
   list_resto = [
     {
@@ -28,5 +34,10 @@ export class AppComponent {
       duree_livraison:"1h"
     }
   ]
+
+  constructor() { }
+
+  ngOnInit() {
+  }
 
 }

@@ -1,0 +1,12 @@
+<!-- Form -->
+<form class="text-center" style="color: #757575;">
+    <!-- Name -->
+    <div class="md-form mt-3">
+        <input type="text" id="materialSubscriptionFormPasswords" class="form-control" mdbInput>
+        <label for="materialSubscriptionFormPasswords">Nom du restaurant</label>
+    </div>
+
+</form>
+<app-resto-list-item  *ngFor="let resto of list_resto"
+                        [name]="resto.name"
+                        [adresse]="resto.adresse"></app-resto-list-item>
