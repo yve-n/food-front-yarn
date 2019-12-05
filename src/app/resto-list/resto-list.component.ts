@@ -1,4 +1,6 @@
+import { RestoSerivce } from './../services/resto.service';
 import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-resto-list',
@@ -7,37 +9,22 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class RestoListComponent implements OnInit {
 
-  @Input() name: string;
-  @Input() adresse: string;
-  @Input() logo: string;
-  @Input() duree_livraison: string;
+  // takes: [];
 
-  // @Input() list_resto;
+  list_resto: any[];
 
-  list_resto = [
-    {
-      name:"Restaurant maBella",
-      adresse:"9 Avenue du fastFood",
-      logo:"lien_du_logo",
-      duree_livraison:"1h",
-    },
-    {
-      name:"Restaurant du Sud",
-      adresse:"139 Rue du commerce",
-      logo:"lien_du_logo",
-      duree_livraison:"3h",
-    },
-    {
-      name:"Viva restaurant",
-      adresse:"28 Rue de la bienvenue",
-      logo:"lien_du_logo",
-      duree_livraison:"1h"
-    }
-  ]
-
-  constructor() { }
+  constructor(private restoService: RestoSerivce, private route:ActivatedRoute) { }
 
   ngOnInit() {
+    this.list_resto = this.restoService.list_resto;
+  }
+
+  onGetTakeAway(){
+    this.list_resto = this.restoService.list_resto;
+  }
+
+  onGetNoTakeAway(){
+    this.list_resto = this.restoService.list_resto;
   }
 
 }

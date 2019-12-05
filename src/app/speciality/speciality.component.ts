@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { RestoSerivce } from './../services/resto.service';
 
 @Component({
   selector: 'app-speciality',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SpecialityComponent implements OnInit {
 
-  constructor() { }
+  @Input() list_resto;
+
+  constructor(private restoService: RestoSerivce) { }
 
   ngOnInit() {
+    // this.list_resto = this.restoService.list_resto;
+  }
+
+  onGetTakeAway(){
+    return this.list_resto;
   }
 
 }

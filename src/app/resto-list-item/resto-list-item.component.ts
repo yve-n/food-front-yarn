@@ -11,8 +11,10 @@ export class RestoListItemComponent implements OnInit {
   @Input() adresse: string;
   @Input() logo: string;
   @Input() duree_livraison: string;
+  @Input() specialite: string;
+  @Input() takes: string;
 
-  @Input() list_resto;
+  // @Input() list_resto;
 
   constructor() { }
 

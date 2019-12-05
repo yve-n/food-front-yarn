@@ -1,12 +1,14 @@
 <!-- Form -->
-<form class="text-center" style="color: #757575;">
+<form class="text-center" style="color: #757575;padding-top: 8px;">
     <!-- Name -->
     <div class="md-form mt-3">
-        <input type="text" id="materialSubscriptionFormPasswords" class="form-control" mdbInput>
+        <input type="text" id="materialSubscriptionFormPasswords" [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}" name="" class="form-control" mdbInput>
         <label for="materialSubscriptionFormPasswords">Nom du restaurant</label>
     </div>
-
 </form>
-<app-resto-list-item  *ngFor="let resto of list_resto"
+<!-- | filter-speciality: searchRadio:'takes'  -->
+<app-resto-list-item  *ngFor="let resto of list_resto | filter : searchText:'name','specialite' "
                         [name]="resto.name"
-                        [adresse]="resto.adresse"></app-resto-list-item>
+                        [adresse]="resto.adresse"
+                        [specialite]="resto.specialite"
+                        [takes]="resto.takes"></app-resto-list-item>
