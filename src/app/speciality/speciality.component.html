@@ -1,0 +1,31 @@
+<div class="">
+    <h4 class="text-center">Options de tri : </h4>
+    <hr>
+    <p>Livraison ou a emporter</p>
+    <!-- {{list_resto}} -->
+
+    <div class="custom-control custom-radio">
+        <!-- <input type="radio" id="delivry_choice_take_away" [(ngModel)]="searchRadio" routerLink="resto-list/take_away" name="customRadio" value="take_away" class="custom-control-input"> -->
+        <input type="radio" id="delivry_choice_take_away" [(ngModel)]="searchRadio" (click)="onGetNoTakeAway()" name="customRadio" value="take_away" class="custom-control-input">
+        <label class="custom-control-label" for="delivry_choice_take_away">delivry_choice_take_away</label>
+    </div>
+    <div class="custom-control custom-radio">
+        <!-- <input type="radio" id="delivry_choice_no_take_away" [(ngModel)]="searchRadio" routerLink="resto-list/no_take_away" name="customRadio" value="no_take_away" class="custom-control-input"> -->
+        <input type="radio" id="delivry_choice_no_take_away" [(ngModel)]="searchRadio" (click)="onGetNoTakeAway()" name="customRadio" value="no_take_away" class="custom-control-input">
+        <label class="custom-control-label" for="delivry_choice_no_take_away">delivry_choice_no_take_away</label>
+    </div>
+
+    <!-- <input _ngcontent-serverapp-c12="" class="custom-control-input onFocusSelect" id="delivry_choice_take_away" mdbinput="" name="delivery_choice" type="radio">
+    <label _ngcontent-serverapp-c12="" class="custom-control-label active" for="delivry_choice_take_away">delivry_choice_take_away</label>
+    <input _ngcontent-serverapp-c11="" class="custom-control-input onFocusSelect" id="delivry_choice_no_take_away" mdbinput="" name="delivery_choice" type="radio">
+    <label _ngcontent-serverapp-c11="" class="custom-control-label active" for="delivry_choice_no_take_away">delivry_choice_no_take_away</label> -->
+
+    <!-- <div class="form-check">
+        <input type="radio" class="form-check-input" id="delivry_choice_take_away" name="delivery_choice" mdbInput value="check1"> <span class="">delivry_choice_take_away</span> <br>
+        <input type="radio" class="form-check-input" id="delivry_choice_no_take_away" name="delivery_choice" mdbInput value="check2"> <span>delivry_choice_take_away</span> <br>
+    </div> -->
+
+    <hr>
+    <p>Specialite</p>
+
+</div>
