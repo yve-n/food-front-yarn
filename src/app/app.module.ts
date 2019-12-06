@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
@@ -13,7 +13,7 @@ import { RestoListComponent } from './resto-list/resto-list.component';
 import { FilterPipe }from './resto-list/filter.pipe';
 import { FilterSpecialityPipe }from './speciality/filter-speciality.pipe';
 import { RestoListItemComponent } from './resto-list-item/resto-list-item.component';
-
+import { NavbarComponent } from './navbar/navbar.component';
 import { RestoSerivce } from './services/resto.service';
 
 import { RouterModule } from "@angular/router";
@@ -23,6 +23,7 @@ const appRoutes: Routes =[
   { path:'resto-list/:takes', component:RestoListComponent },
 ]
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ const appRoutes: Routes =[
     RestoListComponent,
     RestoListItemComponent,
     FilterPipe,
-    FilterSpecialityPipe
+    FilterSpecialityPipe,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
