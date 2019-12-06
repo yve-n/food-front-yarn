@@ -9,6 +9,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class RestoListComponent implements OnInit {
 
+  @Input() title: string;
+
   // takes: [];
 
   list_resto: any[];
@@ -20,11 +22,12 @@ export class RestoListComponent implements OnInit {
   }
 
   onGetTakeAway(){
-    this.list_resto = this.restoService.list_resto;
+    this.list_resto = this.restoService.list_resto2;
+    console.log(this.list_resto);
   }
 
   onGetNoTakeAway(){
-    this.list_resto = this.restoService.list_resto;
+    this.list_resto = this.restoService.list_resto3;
   }
 
 }

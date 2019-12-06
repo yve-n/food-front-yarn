@@ -1,14 +1,57 @@
-<!-- Form -->
-<form class="text-center" style="color: #757575;padding-top: 8px;">
-    <!-- Name -->
-    <div class="md-form mt-3">
-        <input type="text" id="materialSubscriptionFormPasswords" [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}" name="" class="form-control" mdbInput>
-        <label for="materialSubscriptionFormPasswords">Nom du restaurant</label>
-    </div>
-</form>
-<!-- | filter-speciality: searchRadio:'takes'  -->
-<app-resto-list-item  *ngFor="let resto of list_resto | filter : searchText:'name','specialite' "
-                        [name]="resto.name"
-                        [adresse]="resto.adresse"
-                        [specialite]="resto.specialite"
-                        [takes]="resto.takes"></app-resto-list-item>
+<div class="col-lg-3">
+    <!-- <app-speciality></app-speciality> -->
+
+    <div class="">
+            <p class="text-center">Options de tri : </p>
+            <hr>
+            <p>Livraison ou a emporter</p>
+            <!-- {{list_resto}} -->
+        
+            <div class="custom-control custom-radio">
+                <!-- <input type="radio" id="delivry_choice_take_away" [(ngModel)]="searchRadio" routerLink="resto-list/take_away" name="customRadio" value="take_away" class="custom-control-input"> -->
+                <input type="radio" id="delivry_choice_take_away" [(ngModel)]="searchRadio" (click)="onGetTakeAway()" name="customRadio" value="take_away" class="custom-control-input">
+                <label class="custom-control-label" for="delivry_choice_take_away">delivry_choice_take_away</label>
+            </div>
+            <div class="custom-control custom-radio">
+                <!-- <input type="radio" id="delivry_choice_no_take_away" [(ngModel)]="searchRadio" routerLink="resto-list/no_take_away" name="customRadio" value="no_take_away" class="custom-control-input"> -->
+                <input type="radio" id="delivry_choice_no_take_away" [(ngModel)]="searchRadio" (click)="onGetNoTakeAway()" name="customRadio" value="no_take_away" class="custom-control-input">
+                <label class="custom-control-label" for="delivry_choice_no_take_away">delivry_choice_no_take_away</label>
+            </div>
+
+            <hr>
+            <p>Specialite</p>
+            
+            <select (change)="onGetTakeAway()" class="browser-default custom-select">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+            </select>
+            
+        
+        </div>
+
+</div>
+
+<div class="col-lg-9">
+    <!-- Form -->
+    <form class="text-center" style="color: #757575;">
+        <!-- Name -->
+        <div class="md-form mt-3">
+            <input type="text" id="materialSubscriptionFormPasswords" [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}" name="" class="form-control" mdbInput>
+            <label for="materialSubscriptionFormPasswords">Nom du restaurant</label>
+        </div>
+    </form>
+    <!-- {{list_resto}} -->
+    <!-- | filter-speciality: searchRadio:'takes'  -->
+    <app-resto-list-item  *ngFor="let resto of list_resto | filter : searchText:'name' "
+                            [name]="resto.name"
+                            [adresse]="resto.adresse"
+                            [specialite]="resto.specialite"></app-resto-list-item>
+</div>
+
+
+
+
+
+
