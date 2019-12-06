@@ -5,10 +5,13 @@ import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { InputsModule, WavesModule, ButtonsModule } from 'angular-bootstrap-md';
+
+import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -16,7 +19,8 @@ import { InputsModule, WavesModule, ButtonsModule } from 'angular-bootstrap-md';
     MDBBootstrapModule.forRoot(),
     InputsModule,
     WavesModule,
-    ButtonsModule
+    ButtonsModule,
+    GooglePlaceModule
   ],
   providers: [],
   bootstrap: [AppComponent]

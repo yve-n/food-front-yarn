@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'food-app';
+
+  formattedAddress=" ";
+
+  options ={
+      componentRestrictions:{
+
+      country:['FR']
+      }
+
+
+  }
+
+  public handleAddressChange(address: any) {
+    this.formattedAddress=address.formatted_address;
+}
 }
