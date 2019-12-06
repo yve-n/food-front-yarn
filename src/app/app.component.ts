@@ -26,26 +26,19 @@ export class AppComponent {
     this.list_resto = this.restoService.list_resto2;
   }
 
+  formattedAddress=" ";
 
-  // list_resto = [
-  //   {
-  //     name:"Restaurant maBella",
-  //     adresse:"9 Avenue du fastFood",
-  //     logo:"lien_du_logo",
-  //     duree_livraison:"1h",
-  //   },
-  //   {
-  //     name:"Restaurant du Sud",
-  //     adresse:"139 Rue du commerce",
-  //     logo:"lien_du_logo",
-  //     duree_livraison:"3h",
-  //   },
-  //   {
-  //     name:"Viva restaurant",
-  //     adresse:"28 Rue de la bienvenue",
-  //     logo:"lien_du_logo",
-  //     duree_livraison:"1h"
-  //   }
-  // ]
+  options ={
+      componentRestrictions:{
+
+      country:['FR']
+      }
+
+
+  }
+
+  public handleAddressChange(address: any) {
+    this.formattedAddress=address.formatted_address;
+  }
 
 }

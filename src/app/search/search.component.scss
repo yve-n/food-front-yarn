@@ -4,9 +4,10 @@ h1{
 }
 .form-search{
     width: 800px;
-    border: 10px solid rgba(255, 245, 245, 0.418) ;
     padding: 20px;
-   background-color: #fafafa;
+   background-color: rgba(255, 255, 255,1.0);
    margin: auto;
-    
+   border-radius: 10px;
+   box-shadow: 1px 1px 5px #555; 
+   margin-top: 70px;
 }
