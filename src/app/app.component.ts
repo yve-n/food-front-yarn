@@ -26,7 +26,7 @@ export class AppComponent {
     this.list_resto = this.restoService.list_resto2;
   }
 
-  formattedAddress=" ";
+  formattedAddress="";
 
   options ={
       componentRestrictions:{
@@ -38,7 +38,7 @@ export class AppComponent {
   }
 
   public handleAddressChange(address: any) {
-    this.formattedAddress=address.formatted_address;
+    this.formattedAddress=address.adr_address;
   }
 
 }

@@ -14,11 +14,13 @@ export class RestoListComponent implements OnInit {
   // takes: [];
 
   list_resto: any[];
+  adresse: string;
 
   constructor(private restoService: RestoSerivce, private route:ActivatedRoute) { }
 
   ngOnInit() {
     this.list_resto = this.restoService.list_resto;
+    this.adresse = this.route.snapshot.params['adresse'];
   }
 
   onGetTakeAway(){
