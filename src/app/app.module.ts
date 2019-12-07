@@ -15,6 +15,7 @@ import { RestoListItemComponent } from './resto-list-item/resto-list-item.compon
 import { NavbarComponent } from './navbar/navbar.component';
 import { RestoSerivce } from './services/resto.service';
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
+import { BestSpecialitiesComponent } from './best-specialities/best-specialities.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { GooglePlaceModule } from "ngx-google-places-autocomplete";
     FilterPipe,
     FilterSpecialityPipe,
     NavbarComponent,
+    BestSpecialitiesComponent,
   ],
   imports: [
     BrowserModule,
