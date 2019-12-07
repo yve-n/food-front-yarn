@@ -1,4 +1,6 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-search',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  searchForm = new FormGroup({
+    adresse: new FormControl(''),
+  });
 
   ngOnInit() {
+  }
+
+  onSubmit(){
+    this.router.navigate(['liste-restaurant/'+this.searchForm.value['adresse']]);
   }
 
 }
