@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from "@angular/forms";
 import { ReactiveFormsModule } from '@angular/forms';
 
-
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
@@ -19,6 +18,12 @@ import { RestoSerivce } from './services/resto.service';
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 import { BestSpecialitiesComponent } from './best-specialities/best-specialities.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+import { MainpageComponent } from './mainpage/mainpage.component';
+import { FooterComponent } from './footer/footer.component';
+import { ImageComponent } from './image/image.component';
+import { ParisComponent } from './paris/paris.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +35,10 @@ import { BestSpecialitiesComponent } from './best-specialities/best-specialities
     FilterSpecialityPipe,
     NavbarComponent,
     BestSpecialitiesComponent,
+    MainpageComponent,
+    FooterComponent,
+    ImageComponent,
+    ParisComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +52,9 @@ import { BestSpecialitiesComponent } from './best-specialities/best-specialities
     ReactiveFormsModule
   ],
   providers: [
-    RestoSerivce
+    RestoSerivce,
+    BrowserAnimationsModule,
+    MatSliderModule,
   ],
   bootstrap: [AppComponent]
 })

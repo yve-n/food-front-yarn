@@ -1,13 +1,16 @@
 import { RestoSerivce } from './services/resto.service';
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import {ViewChild}  from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
+
   title = 'food-app';
 
   list_resto: any [];
@@ -41,4 +44,7 @@ export class AppComponent {
     this.formattedAddress=address.adr_address;
   }
 
+  lat:number =-33.785809;
+  lng: number =151.121195;
 }
+
