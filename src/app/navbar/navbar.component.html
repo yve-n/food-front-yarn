@@ -1,69 +1,37 @@
- <!-- Grid row -->
-<!-- Grid row -->
-<nav class="mb-1 navbar navbar-expand-lg navbar-light bg-white fixed-top ">
-    <a class="navbar-brand font-weight-bold text-danger" href="#">
-     AloResto
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
-      aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="breadcrumb-dn mr-auto">
-      </div>
-      <ul class="nav navbar-nav nav-flex-icons ml-auto ">
-        <li class="nav-item">
-          <a class="nav-link"><span class="clearfix d-none d-sm-inline-block">Se Connecter</span></a>
+<mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar intro-fixed-nav" [containerInside]="false">
+    <mdb-navbar-brand>
+      <a class="logo navbar-brand" href="#">
+        <strong>Allo Resto</strong>
+      </a>
+    </mdb-navbar-brand>
+    <links>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active waves-light" mdbWavesEffect>
+          <a class="nav-link" routerLink="/" routerLinkActive="active">Home
+            <span class="sr-only">(current)</span>
+          </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link"> <span class="clearfix d-none d-sm-inline-block">S'inscrire</span></a>
+
+        <li class="nav-item waves-light" mdbWavesEffect>
+            <a class="nav-link">Se connecter</a>
+          </li>
+        <li class="nav-item waves-light" mdbWavesEffect>
+          <a class="nav-link">S'inscrire</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link"> <span class="clearfix d-none d-sm-inline-block">Aide</span></a>
-        </li>
-        <li class="nav-item">
-         
-              <button type="button" class="btn btn-outline-default btn-rounded waves-effect"><i class="fas fa-shopping-basket fa-lg"
-                aria-hidden="true"></i> 0,00 €</button>
+        <li class="nav-item waves-light" mdbWavesEffect>
+          <a class="nav-link">Besoin d'aide</a>
         </li>
       </ul>
-    </nav>
-  <!-- Grid row -->
-<header>
-    
-        <nav class="navbar navbar-expand-lg navbar-dark default-color">
-          <a class="navbar-brand" href="/home"><strong>AlooResto </strong></a>
-          <li routerLinkActive="active"><a routerLink="/connexion"> Se connecter</a></li>
-          <li routerLinkActive="active"> <a routerLink="/resto-activity">Restaurateur</a></li>
-              
-              
-              <li routerLinkActive="active"> <a routerLink="/search-map"> Panier</a></li>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-             
-              
-             
-            </ul>
-            <ul class="navbar-nav nav-flex-icons">
-              <li class="nav-item">
-                <a class="nav-link"><i class="fab fa-facebook-f"></i></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link"><i class="fab fa-twitter"></i></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link"><i class="fab fa-instagram"></i></a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-        <div>
-            <p><img src="assets/res.png"style="height:400px;width:2024px"/></p>
+    </links>
+  </mdb-navbar>
+  <!-- Main -->
+  <div class="view intro-2">
+    <div class="full-bg-img">
+      <div class="mask rgba-purple-light flex-center">
+        <div class="container text-center white-text wow fadeInUp">
+          <app-search></app-search>
         </div>
-        
-      </header>
-   
+      </div>
+    </div>
+  </div>
+  <!-- /.Main -->

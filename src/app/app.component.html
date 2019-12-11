@@ -1,36 +1,16 @@
-<app-navbar></app-navbar>
+  <!--Main Navigation-->
+<header class="h-100">
+  <app-navbar></app-navbar>
+</header>
+<!--Main Navigation-->
 
-<div class="container"> 
-<router-outlet></router-outlet>
+<!--Main Layout-->
+<main class="text-center py-5">
+    <router-outlet></router-outlet>
+</main>
+<!--Main Layout-->
 
-<div class="container"  background="assets/b42iYx.png" height="50%" >
-       
-    <div class="container text-center white-text" >
-        <div class="full-bg-img">
-            <div class="mask rgba-black-light flex-center">
-                <div class="white-text text-center wow fadeInUp">
-                    <app-search></app-search>
-                    <app-best-specialities></app-best-specialities>
-                    <p style="text-align: center;padding: 50px;font-size: 30px;">Recherche detaille des restaurants</p>
-                    <app-resto-list></app-resto-list>                
-                </div>
-            </div>         
-        </div> 
-    </div>
-</div>
-
-        
-<p id="titreListeRestaurant">Vos restaurants aux alentours de ...</p>
-<app-resto-list></app-resto-list> 
- 
 <app-footer></app-footer>
-  
-<!-- 
-  <app-image></app-image>
-  <app-footer></app-footer>
-  <app-mainpage></app-mainpage>
-  <p><img src="assets/3.jpg"style="height:350px;width:960px"/></p>
-    
-  --->
+
 
 

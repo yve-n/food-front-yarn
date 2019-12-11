@@ -19,7 +19,7 @@ export class SearchComponent implements OnInit {
   }
 
   onSubmit(){
-    this.router.navigate(['liste-restaurant/'+this.searchForm.value['adresse']]);
+    this.router.navigate(['list-restaurant/'+this.searchForm.value['address']]);
   }
 
 }
