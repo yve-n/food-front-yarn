@@ -114,6 +114,13 @@ export class RestoSerivce {
           logo:"lien_du_logo",
           duree_livraison:"1h",
           takes:"no_take_away"
+        },
+        {
+          name:"Food du bled",
+          adresse:"Avenue du Cameroun",
+          logo:"lien_du_logo",
+          duree_livraison:"2h",
+          takes:"no_take_away"
         }
       ];
 
