@@ -1,0 +1,22 @@
+.sign-in{
+    max-width: 600px;
+    // padding: 30px 60px 60px 30px;
+   background: rgba(255, 255, 255,1.0);
+   margin:0 auto;
+//    border-radius: 10px 10px 10px 10px;
+//    box-shadow: 1px 1px 2px #555; 
+   margin-top: 100px;
+   
+}
+.break{
+    
+    display: table;
+  
+  text-align: center;
+}
+.break:before, .break:after {
+    content: "";
+   display: table-cell;
+    width: 50%;
+    background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=) repeat-x left center;
+}

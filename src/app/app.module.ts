@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { InputsModule, WavesModule, ButtonsModule } from 'angular-bootstrap-md';
+import { CheckboxModule,IconsModule, CardsModule } from 'angular-bootstrap-md';
 import { SpecialityComponent } from './speciality/speciality.component';
 import { RestoListComponent } from './resto-list/resto-list.component';
 import { FilterPipe } from './resto-list/filter.pipe';
@@ -22,6 +23,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { FooterComponent } from './footer/footer.component';
+import { ConnecterComponent } from './connecter/connecter.component';
+import { ChooseAccountComponent } from './choose-account/choose-account.component';
+import { CompteClientComponent } from './compte-client/compte-client.component';
+import { CompteRestoComponent } from './compte-resto/compte-resto.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +41,10 @@ import { FooterComponent } from './footer/footer.component';
     BestSpecialitiesComponent,
     MainpageComponent,
     FooterComponent,
+    ConnecterComponent,
+    ChooseAccountComponent,
+    CompteClientComponent,
+    CompteRestoComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +55,10 @@ import { FooterComponent } from './footer/footer.component';
     ButtonsModule,
     FormsModule,
     GooglePlaceModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CheckboxModule,
+    IconsModule,
+    CardsModule
   ],
   providers: [
     RestoSerivce,
