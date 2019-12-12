@@ -1,4 +1,4 @@
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 
@@ -9,17 +9,33 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class SearchComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private route:ActivatedRoute) { }
 
   searchForm = new FormGroup({
-    adresse: new FormControl(''),
+    address: new FormControl(''),
   });
+
+  formattedAddress="";
+
+  options ={
+      componentRestrictions:{
+      country:['FR']
+      }
+  }
+
+  addressFixe: string;
+
+  livraison= "take_away";
+
 
   ngOnInit() {
   }
 
-  onSubmit(){
-    this.router.navigate(['list-restaurant/'+this.searchForm.value['address']]);
+  public handleAddressChange(address: any) {
+    this.formattedAddress=address.address_components[2].long_name;
+    this.router.navigate(['list-restaurant/'+this.formattedAddress]);
+    // this.router.navigate(['list-restaurant', "address",this.formattedAddress]);
   }
+
 
 }

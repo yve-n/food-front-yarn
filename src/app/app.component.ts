@@ -29,20 +29,8 @@ export class AppComponent {
     this.list_resto = this.restoService.list_resto2;
   }
 
-  formattedAddress="";
-
-  options ={
-      componentRestrictions:{
-
-      country:['FR']
-      }
 
 
-  }
-
-  public handleAddressChange(address: any) {
-    this.formattedAddress=address.adr_address;
-  }
 
   lat:number =-33.785809;
   lng: number =151.121195;
