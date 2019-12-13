@@ -24,9 +24,10 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { FooterComponent } from './footer/footer.component';
 import { ConnecterComponent } from './connecter/connecter.component';
-import { ChooseAccountComponent } from './choose-account/choose-account.component';
-import { CompteClientComponent } from './compte-client/compte-client.component';
-import { CompteRestoComponent } from './compte-resto/compte-resto.component';
+
+import { ClientComponent } from './Client/Client.component';
+import { RestaurantOwnerComponent } from './RestaurantOwner/RestaurantOwner.component';
+import { RestaurantComponent } from './restaurant/restaurant.component';
 
 @NgModule({
   declarations: [
@@ -42,9 +43,10 @@ import { CompteRestoComponent } from './compte-resto/compte-resto.component';
     MainpageComponent,
     FooterComponent,
     ConnecterComponent,
-    ChooseAccountComponent,
-    CompteClientComponent,
-    CompteRestoComponent,
+    
+    ClientComponent,
+    RestaurantOwnerComponent,
+    RestaurantComponent,
   ],
   imports: [
     BrowserModule,
