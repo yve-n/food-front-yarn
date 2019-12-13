@@ -9,10 +9,10 @@ import { SearchComponent } from './search/search.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { InputsModule, WavesModule, ButtonsModule } from 'angular-bootstrap-md';
 import { SpecialityComponent } from './speciality/speciality.component';
-import { RestoListComponent } from './resto-list/resto-list.component';
-import { FilterPipe } from './resto-list/filter.pipe';
+import { ListRestaurantComponent } from './list-restaurant/list-restaurant.component';
+import { FilterPipe } from './list-restaurant/filter.pipe';
 import { FilterSpecialityPipe } from './speciality/filter-speciality.pipe';
-import { RestoListItemComponent } from './resto-list-item/resto-list-item.component';
+import { ListRestaurantItemComponent } from './list-restaurant-item/list-restaurant-item.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RestoSerivce } from './services/resto.service';
 import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
@@ -22,20 +22,24 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { FooterComponent } from './footer/footer.component';
+import { NavbarNoHomeComponent } from './navbar-no-home/navbar-no-home.component';
+import { RestaurantComponent } from './restaurant/restaurant.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
     SpecialityComponent,
-    RestoListComponent,
-    RestoListItemComponent,
+    ListRestaurantComponent,
+    ListRestaurantItemComponent,
     FilterPipe,
     FilterSpecialityPipe,
     NavbarComponent,
     BestSpecialitiesComponent,
     MainpageComponent,
     FooterComponent,
+    NavbarNoHomeComponent,
+    RestaurantComponent,
   ],
   imports: [
     BrowserModule,

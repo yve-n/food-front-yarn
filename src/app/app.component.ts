@@ -15,6 +15,8 @@ export class AppComponent {
 
   list_resto: any [];
 
+  page = "home"
+
   constructor(private restoService: RestoSerivce, private route:ActivatedRoute) { }
 
   ngOnInit() {
