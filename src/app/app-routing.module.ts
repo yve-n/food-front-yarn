@@ -16,6 +16,9 @@ const routes: Routes = [
   
   {path: 'signup-client', component: ClientComponent},
   {path: 'signup-restaurantOwner', component: RestaurantOwnerComponent},
+  { path: 'list-restaurant/address/:address/livraison/:livraison', component: RestoListComponent},
+  { path: 'list-restaurant/address/:address/livraison/:livraison/speciality/:speciality', component: RestoListComponent},
+  // { path: 'list-restaurant/:departement/:city', component: RestoListComponent},
 ];
 
 @NgModule({
