@@ -1,1 +1,45 @@
-<p>restaurant works!</p>
+<div class="Restaurant">
+    <!-- Default form login -->
+      <form class="text-center border border-light p-5">
+  
+          <p class="h4 mb-4">Informations du restaurant</p>  
+            
+        <!--nom du restaurant-->
+           <input type="text"  class="form-control mb-4" placeholder="Nom de mon restaurant">
+      <!--adresse-->
+          <input type="address"  class="form-control mb-4" placeholder="address">
+      <!-- Email -->
+             <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+    <!--ville-->
+    <input type="text"  class="form-control mb-4" placeholder="ville">
+    <!--code postal-->
+    <input type="number"  class="form-control mb-4" placeholder="Code postal">
+    <!--numéro-->
+    <input type="number"  class="form-control mb-4" placeholder="Numéro du restaurant">
+      <!--spécialités-->
+      <label>Spécialités culinaires</label>
+      <select class="browser-default custom-select">
+        <option selected>Japonais</option>
+        <option value="1">chinois</option>
+        <option value="2">Burgers</option>
+        <option value="3">indien-pakistanais</option>
+        <option value="4">libanais</option>
+        <option value="5">creperies</option>
+        <option value="6">autres spécialités</option>
+      </select>
+        <!--livraison-->
+        <label>Proposez vous de la livraison actuellement</label>
+      <select class="browser-default custom-select" >
+        <option selected>Livraison et à emporter</option>
+        <option value="1">Non je ne propose pas de service de livraison</option>
+        <option value="2">oui j'ai mon propre service de livraison</option>
+      </select>
+      <br><br>
+      <!--montant min-->
+      <input type="text" class="form-control mb-4" placeholder="Montant min d'une commande ">
+         <!-- Sign in button -->
+         <a routerLink="/signup-restaurantOwner/:restaurant" routerLinkActive="active">
+            <button mdbBtn color="info" block="true" class="my-4" type="submit">Soumettre</button>
+         </a>
+        </form>
+         </div>

@@ -29,12 +29,15 @@
       <!-- Email -->
              <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
     
+             <!--phone-->
+             <input type="number"  class="form-control mb-4" placeholder="phone">
       <!-- Password -->
              <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
         
          <!-- Sign in button -->
+         <a routerLink="/signup-restaurantOwner/:restaurant" routerLinkActive="active">
             <button mdbBtn color="info" block="true" class="my-4" type="submit">Continuer</button>
-
+         </a>
             <p>vous avez déja un compte?
                 <a  routerLink="/connecter" routerLinkActive="active">connexion</a>
               </p>
