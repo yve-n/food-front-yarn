@@ -1,3 +1,4 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -7,7 +8,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { InputsModule, WavesModule, ButtonsModule } from 'angular-bootstrap-md';
+import { MatExpansionModule} from '@angular/material/expansion';
 import { SpecialityComponent } from './speciality/speciality.component';
 import { ListRestaurantComponent } from './list-restaurant/list-restaurant.component';
 import { FilterPipe } from './list-restaurant/filter.pipe';
@@ -18,12 +19,12 @@ import { RestoSerivce } from './services/resto.service';
 import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
 import { BestSpecialitiesComponent } from './best-specialities/best-specialities.component';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSliderModule } from '@angular/material/slider';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarNoHomeComponent } from './navbar-no-home/navbar-no-home.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
+
+
 
 @NgModule({
   declarations: [
@@ -45,17 +46,14 @@ import { RestaurantComponent } from './restaurant/restaurant.component';
     BrowserModule,
     AppRoutingModule,
     MDBBootstrapModule.forRoot(),
-    InputsModule,
-    WavesModule,
-    ButtonsModule,
     FormsModule,
     GooglePlaceModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatExpansionModule,
+    BrowserAnimationsModule,
   ],
   providers: [
-    RestoSerivce,
-    BrowserAnimationsModule,
-    MatSliderModule,
+    RestoSerivce
   ],
   bootstrap: [AppComponent]
 })

@@ -13,13 +13,13 @@
                 <div class="custom-control custom-radio">
                     <!-- <input type="radio" id="delivry_choice_no_take_away" [(ngModel)]="searchRadio" routerLink="resto-list/no_take_away" name="customRadio" value="no_take_away" class="custom-control-input"> -->
                     <input type="radio" id="delivry_choice_no_take_away" (click)="onGetNoTakeAway($event.target.value)" name="customRadio" value="no_take_away" checked class="custom-control-input">
-                    <label class="custom-control-label" for="delivry_choice_no_take_away">livraison</label>
+                    <label class="custom-control-label" for="delivry_choice_no_take_away">Livraison</label>
                 </div>
             
                 <div class="custom-control custom-radio">
                     <!-- <input type="radio" id="delivry_choice_take_away" [(ngModel)]="searchRadio" routerLink="resto-list/take_away" name="customRadio" value="take_away" class="custom-control-input"> -->
                     <input type="radio" id="delivry_choice_take_away" (click)="onGetTakeAway($event.target.value)" name="customRadio" value="take_away" class="custom-control-input">
-                    <label class="custom-control-label" for="delivry_choice_take_away">à emporter</label>
+                    <label class="custom-control-label" for="delivry_choice_take_away">A emporter</label>
                 </div>
 
                 <hr>
