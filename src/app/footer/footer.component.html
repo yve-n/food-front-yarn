@@ -72,18 +72,20 @@
           <h6 class="text-uppercase font-weight-bold">Specialités</h6>
           <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
           <p>
-            <a outerLink="/list-restaurant/:address/:speciality" routerLinkActive="active">Africain</a>
+            <a routerLink="/speciality/:Africain/:africain" routerLinkActive="active">Africain</a>
           </p>
           <p>
-            <a href="#!">MDWordPress</a>
+            <a routerLink="/livraison/:Japonais/:japonais" routerLinkActive="active">Japonais</a>
           </p>
           <p>
-            <a href="#!">BrandFlow</a>
+            <a routerLink="/livraison/:Chinois/:chinois" routerLinkActive="active">Chinois</a>
           </p>
           <p>
-            <a [routerLink]="['/list-restaurant', { address: 'crisisId', speciality: 'foo' }]">Lyon</a>
+            <a routerLink="/livraison/:KFC/:kFC" routerLinkActive="active">KFC</a>
           </p>
-
+          <p>
+            <a routerLink="/livraison/:Pizza/:pizza" routerLinkActive="active">Pizza</a>
+          </p>
         </div>
         <!-- Grid column -->
 
@@ -94,18 +96,21 @@
           <h6 class="text-uppercase font-weight-bold">Villes</h6>
           <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
           <p>
-            <a routerLink="/list-restaurant/:departement/:city" routerLinkActive="active">Paris</a>
+             
+            <a routerLink="livraison/:Paris/:Paris" routerLinkActive="active">Paris</a>
           </p>
           <p>
-            <a href="#!">Become an Affiliate</a>
+            <a routerLink="livraison/:Nice/:Nice" routerLinkActive="active">Nice</a>
           </p>
           <p>
-            <a href="#!">Shipping Rates</a>
+            <a routerLink="livraison/:Lile/:Lile" routerLinkActive="active">Lile</a>
           </p>
           <p>
-            <a href="#!">Help</a>
+            <a routerLink="livraison/:Lyon/:Lyon" routerLinkActive="active">Lyon</a>
           </p>
-
+          <p>
+            <a routerLink="livraison/:Marseille/:Marseille" routerLinkActive="active">Marseille</a>
+          </p>
         </div>
         <!-- Grid column -->
 
@@ -145,3 +150,4 @@
 
   </footer>
   <!-- Footer -->
+  

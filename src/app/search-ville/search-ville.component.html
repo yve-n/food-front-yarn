@@ -1,0 +1,21 @@
+
+<div class="form-search">
+      
+    <p class="h4 mb-4">Livraison à domicile </p>
+    <h6 class="h4 mb-4">Mon code postal</h6>
+    <a class="text-uppercase font-weight-bold">J'aimerais manger...</a>
+<form class="text-center" method="GET" action="" (ngSubmit)="onSubmit()" role="" [formGroup]="searchForm">
+    
+<div class="input-group mb-3">
+    
+<input ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)" formControlName="adresse" type="text" class="form-control" placeholder="par exemple 9100" aria-label="for example" aria-describedby="button-addon2">
+
+<input ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)" formControlName="adresse" type="text" class="form-control" placeholder="tout voir" aria-label="see everything" aria-describedby="button-addon2">
+<div class="input-group-append">         
+  
+<button  type="submit" mdbBtn color="primary" mdbWavesEffect size="md" class="m-0 px-3 py-2" id="button-addon2">Commander</button>
+</div>
+
+</div>
+</form>
+</div>

@@ -22,6 +22,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { FooterComponent } from './footer/footer.component';
+import { CityComponent } from './city/city.component';
+import { SearchVilleComponent } from './search-ville/search-ville.component';
+import { Navbar2Component } from './navbar2/navbar2.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,9 @@ import { FooterComponent } from './footer/footer.component';
     BestSpecialitiesComponent,
     MainpageComponent,
     FooterComponent,
+    CityComponent,
+    SearchVilleComponent,
+    Navbar2Component,
   ],
   imports: [
     BrowserModule,

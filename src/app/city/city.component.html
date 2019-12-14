@@ -1,0 +1,92 @@
+
+  
+<div class="view intro-2">
+        <div class="full-bg-img">
+          <div class="mask rgba-purple-light flex-center">
+            <div class="container text-center white-text wow fadeInUp">
+               
+                    <app-search-ville></app-search-ville>
+             
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="md-form mt-3">
+          <input type="text" id="inputSearchRestaurantByName" [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}" name="" class="form-control" mdbInput>
+          <label for="inputSearchRestaurantByName">
+              
+                  <a class="logo navbar-brand" href="#">
+                    <strong>Allo Resto</strong>
+                  </a>
+                
+                <mdb-navbar-brand>
+                    <a class="logo navbar-brand" href="livraison/:livraison/:livraison">
+                      <strong>livraison</strong>
+                    </a>
+                  </mdb-navbar-brand>
+                  <mdb-navbar-brand>
+                      <a class="logo navbar-brand" href="livraison/:Paris/:paris">
+                        <strong>Paris</strong>
+                      </a>
+                    </mdb-navbar-brand>
+                    
+          </label>
+         
+      </div>
+      <a>Plus besoin de vous déplacer avec  Allo Resto: retrouvez sur notre site un grand choix de restaurants proposant la livraison à Paris. Il n’a jamais été aussi simple de se faire livrer à manger ! Dans tous les arrondissements, rive gauche, rive droite, au nord, au sud, en plein Paris et en petite couronne, choisissez votre prochain repas parmi notre énorme choix de restaurants. Au menu, sushis, pizzas, burgers, thai, vietnamien, indien, mexicain... On a forcément ce dont vous avez envie. Choisissez le restaurant qui vous plait, commandez en quelques clics et faites-vous livrer chez vous ou au travail, en toute sécurité. Du coup, pas de culpabilité: restez chez vous et on s'occupe de tout!</a>
+      <div class="row mt-3">
+          <div class="row">
+        <div class="col-sm-3" id="divOptionTri">
+            <p class="">Restaurants disponibles à paris</p>
+            <hr>
+            <p>Que prendrez-vous?</p>
+            <p>Choisissez une spécialité:</p>
+            <!-- {{list_resto}} -->
+        
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                <!-- Links -->
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+            
+                          <li class="selected">
+                            <a href=""title="tous">
+                            <strong>tous</strong></a></li>
+                          
+                          <li value="2"><a href="livraison/:Paris/:Paris"title="paris">
+                            <strong>paris</strong></a></li>
+                            <li value="2">
+                              <a href="livraison/:Marseille/:Marseille"title="marseille">
+                              <strong>Marseille</strong></a>
+                              </li>
+                            
+                              <li value="2"><a href="livraison/:Nice/:Nice"title="Nice">
+                                <strong>Nice</strong></a></li>
+                                <li value="2">
+                                  <a href="livraison/:Lyon/:Lyon"title="Lyon">
+                                  <strong>lyon</strong></a>
+                                  </li>
+                
+                                  <li value="2">
+                                      <a href="livraison/:lille/:lille"title="lille">
+                                        
+                                      <strong>lille</strong></a>
+                                      </li>
+                                      <li value="2">
+                                          <a href="livraison/:toulouse/:toulouse"title="toulouse">
+                                          <strong>toulouse</strong></a>
+                                          </li>
+                
+                
+                
+              </div>
+            
+            <hr>
+            
+        </div>
+
+      <app-navbar2></app-navbar2>
+      <!--Main Layout-->
+  
+  <!--Main Layout-->
