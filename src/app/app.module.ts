@@ -28,6 +28,7 @@ import { ConnecterComponent } from './connecter/connecter.component';
 
 import { ClientComponent } from './Client/Client.component';
 import { RestaurantOwnerComponent } from './RestaurantOwner/RestaurantOwner.component';
+import { DashboardClientComponent } from './dashboard-client/dashboard-client.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { RestaurantOwnerComponent } from './RestaurantOwner/RestaurantOwner.comp
     FooterComponent,
     ConnecterComponent,  
     ClientComponent,
-    RestaurantOwnerComponent 
+    RestaurantOwnerComponent,
+    DashboardClientComponent 
   ],
   imports: [
     BrowserModule,
