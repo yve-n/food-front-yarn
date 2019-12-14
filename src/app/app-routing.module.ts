@@ -6,7 +6,6 @@ import { ConnecterComponent } from './connecter/connecter.component';
 
 import { ClientComponent } from './Client/Client.component';
 import { RestaurantOwnerComponent } from './RestaurantOwner/RestaurantOwner.component';
-import { RestaurantComponent } from './restaurant/restaurant.component';
 
 const routes: Routes = [
   { path: '', component: MainpageComponent},
@@ -19,7 +18,7 @@ const routes: Routes = [
   {path: 'signup-restaurantOwner', component: RestaurantOwnerComponent},
   { path: 'list-restaurant/address/:address/livraison/:livraison', component: RestoListComponent},
   { path: 'list-restaurant/address/:address/livraison/:livraison/speciality/:speciality', component: RestoListComponent},
-  {path: 'signup-restaurantOwner/:restaurant', component: RestaurantComponent},
+ 
   // { path: 'list-restaurant/:departement/:city', component: RestoListComponent},
 ];
 

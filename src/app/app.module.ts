@@ -24,10 +24,10 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { FooterComponent } from './footer/footer.component';
 import { ConnecterComponent } from './connecter/connecter.component';
+// For MDB Angular Free
 
 import { ClientComponent } from './Client/Client.component';
 import { RestaurantOwnerComponent } from './RestaurantOwner/RestaurantOwner.component';
-import { RestaurantComponent } from './restaurant/restaurant.component';
 
 @NgModule({
   declarations: [
@@ -42,11 +42,9 @@ import { RestaurantComponent } from './restaurant/restaurant.component';
     BestSpecialitiesComponent,
     MainpageComponent,
     FooterComponent,
-    ConnecterComponent,
-    
+    ConnecterComponent,  
     ClientComponent,
-    RestaurantOwnerComponent,
-    RestaurantComponent,
+    RestaurantOwnerComponent 
   ],
   imports: [
     BrowserModule,

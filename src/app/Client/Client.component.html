@@ -1,45 +1,48 @@
-<div class="client">
-    <!-- Default form login -->
-      <form class="text-center border border-light p-5">
-  
-          <p class="h4 mb-4">Inscription</p>  
-            
-          <div class="icon button">
-          <a button mdbBtn type="button" block="true" outline="true" color="default" mdbWavesEffect>
-              <mdb-icon fab icon="google"></mdb-icon> sign in with google
-         </a>
-             <br>
-             
-          <a button mdbBtn type="button" block="true" outline="true" color="default" mdbWavesEffect>
-              <mdb-icon fab icon="facebook"></mdb-icon> sign in with facebook
-          </a>
-             <br>
-        </div>
-            
-        <div class="row">
-            <div class="col-lg-5"> <hr> </div>
-            <div class="col-lg-1 text-center"> ou </div>
-            <div class="col-lg-5"> <hr> </div>
-         </div>
-           <br>
-           <input type="text"  class="form-control mb-4" placeholder="FirstName">
-
-          <input type="text"  class="form-control mb-4" placeholder="LastName">
-      <!-- Email -->
-             <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">  
     
-      <!-- Password -->
-             <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
-          
-         <!-- Default unchecked -->
-         <mdb-checkbox [default]="true">Si vous ne souhaitez pas recevoir des réductions super alléchantes ou de délicieuses offres exclusives, cochez cette case</mdb-checkbox>     
-        
-         <!-- Sign in button -->
-            <button mdbBtn color="info" block="true" class="my-4" type="submit">se connecter</button>
+         <!-- Default form login -->
+            <form class="border border-light p-5">
+  
+                     <p class="h4 mb-4">Inscription</p>  
+            
+                <div class="icon button">
+                    <a button mdbBtn type="button" block="true" outline="true" color="default" mdbWavesEffect>
+                        <mdb-icon fab icon="google"></mdb-icon> S'inscrire avec google
+                    </a>
+                    <a button mdbBtn type="button" block="true" class="my-2" outline="true" color="default" mdbWavesEffect>
+                        <mdb-icon fab icon="facebook"></mdb-icon> S'inscrire avec facebook
+                     </a>
+                </div>
+            
+                <div class="row">
+                    <div class="col-lg-5"> <hr> </div>
+                    <div class="col-lg-1 text-center"> ou </div>
+                    <div class="col-lg-5"> <hr> </div>
+                </div>
+                
+                    <input type="text"  class="form-control mb-4" placeholder="Prénom">
 
-            <p>vous avez déja un compte?
-                <a  routerLink="/connecter" routerLinkActive="active">connexion</a>
-              </p>
+                    <input type="text"  class="form-control mb-4" placeholder="Nom">
+                 <!-- Email -->
+                    <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+    
+                 <!-- Password -->
+                    <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Mot de passe">
           
-        </form>
-         </div>
+                 <!-- Default unchecked -->
+                     <mdb-checkbox [default]="true">Si vous ne souhaitez pas recevoir des réductions super alléchantes ou de délicieuses offres exclusives, cochez cette case</mdb-checkbox>     
+        
+                 <!-- Sign in button -->
+                     <button mdbBtn color="info" block="true" class="my-4" type="submit">s'inscrire</button>
+
+                        <p class="text-center">vous avez déja un compte?
+                         <a  routerLink="/connecter" routerLinkActive="active">connexion</a>
+                        </p>
+          
+            </form>
+        
+        </div>
+    </div>
+</div>
