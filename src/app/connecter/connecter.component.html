@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+     
+          <!-- Default form login -->
+      <form class=" border border-light p-5">
+      
+            <p class="h4 mb-4"> Connexion</p>
+              <div class="icon button" >
+                 <a button mdbBtn type="button" block="true" outline="true" color="primary" mdbWavesEffect>
+                      <mdb-icon fab icon="facebook"></mdb-icon> se connecter avec facebook
+                 </a>
+                 <a button mdbBtn type="button" block="true" class="my-2" outline="true" color="primary" mdbWavesEffect>
+                      <mdb-icon fab icon="google"></mdb-icon> se connecter avec google
+                 </a>
+              </div>
+               <div class="row">
+                <div class="col-lg-5"> <hr> </div>
+                <div class="col-lg-1 text-center"> ou </div>
+                <div class="col-lg-5"> <hr> </div>
+             </div>   
+             
+          <!-- Email -->
+                <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+          <!-- Password -->
+                <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Mot de passe">
+              <div class="d-flex justify-content-around">
+                   <div>
+                    <!-- Remember me -->
+                    <mdb-checkbox [default]="true">Se rappeller de moi</mdb-checkbox>
+                  </div>
+                  <div>
+                    <!-- Forgot password -->
+                    <a href="">Mot de passe oublié?</a>
+                  </div>
+              </div>
+        
+            <!-- Sign in button -->
+                <button mdbBtn color="primary" block="true" class="my-4" type="submit">Se connecter</button>
+        
+             <!-- Register -->
+              <p class="text-center">Vous n'avez pas de compte?
+                   <a routerLink="/signup-client" routerLinkActive="active" >S'inscrire</a>
+             </p>
+           <!-- Default form login -->
+      </form>  
+    </div>
+ </div>
+</div>
