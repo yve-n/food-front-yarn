@@ -12,10 +12,14 @@
     "titleBar.inactiveForeground": "#e7e7e799",
     "statusBar.background": "#1857a4",
     "statusBarItem.hoverBackground": "#1f6fd0",
-    "statusBar.foreground": "#e7e7e7"
+    "statusBar.foreground": "#e7e7e7",
+    "editorIndentGuide.activeBackground": "#FFA500"
   },
   "peacock.color": "#1857a4",
-
+  "window.zoomLevel": 0.75,
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.highlightModifiedTabs": true,
 
   "editor.autoIndent": true,
@@ -27,7 +31,7 @@
   "editor.cursorSmoothCaretAnimation": true,
   "editor.cursorStyle": "line",
   "editor.fontSize": 16,
-  "editor.fontFamily": "Dank Mono, Operator Mono, Fira Code, Inconsolata, Menlo",
+  "editor.fontFamily": "'Source Code Pro', Dank Mono, Operator Mono, Fira Code, Inconsolata, Menlo",
   "editor.fontLigatures": true,
   "editor.formatOnPaste": true,
   "editor.formatOnType": false,
@@ -39,6 +43,33 @@
   "editor.tabCompletion": "on",
   "editor.tabSize": 2,
   "editor.wordWrap": "off",
+  "breadcrumbs.enabled": true,
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.detectIndentation": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  "editor.snippetSuggestions": "top",
+  "editor.wrappingIndent": "indent",
+  "emmet.preferences": {
+    "format.forceIndentationForTags": "address,article,aside,audio,blockquote,body,canvas,div,dl,fieldset,figcaption,figure,footer,form,head,header,iframe,main,map,nav,object,ol,p,pre,section,style,table,tbody,td,tfoot,th,thead,tr,ul,video"
+  },
+  "html.format.endWithNewline": true,
+  "html.format.extraLiners": "body",
+  "html.format.indentInnerHtml": true,
+  "html.format.unformatted": "b,em,i,span,strong,wbr",
+  "html.format.wrapLineLength": 0,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.port": 0,
+  "path-autocomplete.excludedItems": {
+    "**/{.vscode,.DS_Store,.git,.gitignore,node_modules}": {
+      "when": "**"
+    }
+  },
+  "path-autocomplete.extensionOnImport": true,
 
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 5000,
