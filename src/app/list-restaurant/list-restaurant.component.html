@@ -9,21 +9,22 @@
                 <hr>
                 <p>Livraison ou à emporter</p>
                 <!-- {{list_resto}} -->
-            
-                <div class="custom-control custom-radio">
-                    <!-- <input type="radio" id="delivry_choice_take_away" [(ngModel)]="searchRadio" routerLink="resto-list/take_away" name="customRadio" value="take_away" class="custom-control-input"> -->
-                    <input type="radio" id="delivry_choice_take_away" [(ngModel)]="searchRadio" (click)="onGetTakeAway($event.target.value)" name="customRadio" value="take_away" class="custom-control-input">
-                    <label class="custom-control-label" for="delivry_choice_take_away">à emporter</label>
-                </div>
+
                 <div class="custom-control custom-radio">
                     <!-- <input type="radio" id="delivry_choice_no_take_away" [(ngModel)]="searchRadio" routerLink="resto-list/no_take_away" name="customRadio" value="no_take_away" class="custom-control-input"> -->
-                    <input type="radio" id="delivry_choice_no_take_away" [(ngModel)]="searchRadio" (click)="onGetNoTakeAway($event.target.value)" name="customRadio" value="no_take_away" class="custom-control-input">
-                    <label class="custom-control-label" for="delivry_choice_no_take_away">livraison</label>
+                    <input type="radio" id="delivry_choice_no_take_away" (click)="onGetNoTakeAway($event.target.value)" name="customRadio" value="no_take_away" checked class="custom-control-input">
+                    <label class="custom-control-label" for="delivry_choice_no_take_away">Livraison</label>
                 </div>
-    
+
+                <div class="custom-control custom-radio">
+                    <!-- <input type="radio" id="delivry_choice_take_away" [(ngModel)]="searchRadio" routerLink="resto-list/take_away" name="customRadio" value="take_away" class="custom-control-input"> -->
+                    <input type="radio" id="delivry_choice_take_away" (click)="onGetTakeAway($event.target.value)" name="customRadio" value="take_away" class="custom-control-input">
+                    <label class="custom-control-label" for="delivry_choice_take_away">A emporter</label>
+                </div>
+
                 <hr>
                 <p>Specialité</p>
-                
+
                 <select (change)="onGetSpeciality($event.target.value)" class="browser-default custom-select">
                     <option selected>Toutes les specialités</option>
                     <option value="1">Pizza</option>
@@ -31,9 +32,9 @@
                     <option value="3">Aloko</option>
                 </select>
             </div>
-    
-    
-    
+
+
+
             <div class="col-sm-9">
                 <!-- Form -->
                 <form id="formSearchRestaurantById" class="" style="color: #757575;">
@@ -52,9 +53,9 @@
                             [adresse]="resto.adresse"
                             [specialite]="resto.specialite"></app-resto-list-item>
                     </li>
-                    
+
                 </ul>
-                
+
             </div>
         </div>
     </div>

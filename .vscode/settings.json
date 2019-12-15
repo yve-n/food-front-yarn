@@ -45,7 +45,7 @@
   "editor.wordWrap": "off",
   "breadcrumbs.enabled": true,
   "editor.acceptSuggestionOnEnter": "on",
-  "editor.detectIndentation": false,
+  "editor.detectIndentation": true,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.quickSuggestions": {
     "other": true,

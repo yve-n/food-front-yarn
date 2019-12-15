@@ -2,10 +2,10 @@ import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-resto-list-item',
-  templateUrl: './resto-list-item.component.html',
-  styleUrls: ['./resto-list-item.component.scss']
+  templateUrl: './list-restaurant-item.component.html',
+  styleUrls: ['./list-restaurant-item.component.scss']
 })
-export class RestoListItemComponent implements OnInit {
+export class ListRestaurantItemComponent implements OnInit {
 
   @Input() name: string;
   @Input() adresse: string;

@@ -1,17 +1,19 @@
-import { RestoSerivce } from './../services/resto.service';
+import { RestoSerivce } from '../services/resto.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-resto-list',
-  templateUrl: './resto-list.component.html',
-  styleUrls: ['./resto-list.component.scss']
+  selector: 'app-list-restaurant',
+  templateUrl: './list-restaurant.component.html',
+  styleUrls: ['./list-restaurant.component.scss']
 })
-export class RestoListComponent implements OnInit {
+export class ListRestaurantComponent implements OnInit {
 
   @Input() title: string;
 
   // takes: [];
+
+  page="";
 
   list_resto: any[];
   address: string;
@@ -28,19 +30,19 @@ export class RestoListComponent implements OnInit {
   }
 
   onGetTakeAway(event: any){
-    this.list_resto = this.restoService.list_resto2;
-    this.router.navigate(['list-restaurant', "address",this.address, "livraison",event]);
+    // this.list_resto = this.restoService.list_resto2;
+    this.router.navigate(['list-restaurant', "address",this.address, "livraison",event, "speciality",""]);
     
   }
 
   onGetNoTakeAway(event: any){
-    this.list_resto = this.restoService.list_resto3;
-    this.router.navigate(['list-restaurant', "address",this.address, "livraison",event]);
+    // this.list_resto = this.restoService.list_resto3;
+    this.router.navigate(['list-restaurant', "address",this.address, "livraison",event, "speciality",""]);
   }
 
   onGetSpeciality(event: any){
     if (event==1) {
-      this.list_resto = this.restoService.list_resto3;
+      // this.list_resto = this.restoService.list_resto3;
       this.router.navigate(['list-restaurant', "address",this.address, "livraison",this.livraison, "speciality",event]);
     } else if (event==2) {
       this.router.navigate(['list-restaurant', "address",this.address, "livraison",this.livraison, "speciality",event]);
