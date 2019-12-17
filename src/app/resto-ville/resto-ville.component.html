@@ -1,0 +1,111 @@
+<div class="container">
+    <hr>
+    <div class="row">
+        <div class="col-sm-3" id="divOptionTri">
+            
+            
+            <p>Restaurants disponibles à paris</p>
+            <!-- {{list_resto}} -->
+   
+
+
+            <nav id="CuisineTypes"><p class="whatDoYou">Que prendrez-vous ?</p>
+                <p id="pickCuisine" class="hiding">Choisissez une ville:</p>
+            
+             
+            
+                <div style="background-color: rgba(220, 218, 224, 0.933);">
+                            <div class="container">
+            
+                                 <a href=""title="tous">
+                                <h3 class="selectedCuisine">Tout</h3>
+                                <span class="iconFont selectedTick"></span>
+                                   </a>
+                            </div>
+                    </div>
+                
+                    <div style="background-color: rgba(220, 218, 224, 0.933);">
+                             <div class="container">
+                                <a href="livraison/:Paris/:Paris"title="paris">
+                                 <h3 class="selectedCuisine">paris</h3>
+                                <span class="iconFont selectedTick"></span>
+                                </a>
+                              </div>
+                   </div>
+
+                
+                   <div style="background-color: rgba(220, 218, 224, 0.933);">
+                             <div class="container">
+                               <a href="livraison/:Marseille/:Marseille"title="marseille">
+                                <h3 class="selectedCuisine">Marseille</h3><span class="iconFont selectedTick"></span></a>
+                             </div>
+                </div>
+                    
+                <div style="background-color: rgba(220, 218, 224, 0.933);">
+                            <div class="container">
+                              <a href="livraison/:Nice/:Nice"title="Nice">
+                              <h3 class="selectedCuisine">Nice</h3><span class="iconFont selectedTick"></span></a>
+                            </div>
+                    </div>
+                    
+                    <div style="background-color: rgba(220, 218, 224, 0.933);">
+                            <div class="container">
+                               <a href="livraison/:Lyon/:Lyon"title="Lyon">
+                                <h3 class="selectedCuisine">lyon</h3><span class="iconFont selectedTick"></span></a>
+                            </div>
+                    </div>
+                        
+                        <div style="background-color: rgba(220, 218, 224, 0.933);">
+                                <div class="container">
+                          <a href="livraison/:lille/:lille"title="lille">
+                            
+                            <h3 class="selectedCuisine">Lille</h3><span class="iconFont selectedTick"></span></a>
+                                </div>
+                        </div>
+                            
+                            <div style="background-color: rgba(220, 218, 224, 0.933);">
+                                    <div class="container">
+                                          
+
+                                            <a href="livraison/:toulouse/:toulouse"title="toulouse">
+                                            <h3 class="selectedCuisine">Toulouse</h3><span class="iconFont selectedTick"></span></a>
+                                    </div>
+                                    
+                            </div>
+    
+              
+            </nav>
+        
+        </div>
+
+        
+    
+
+
+        <div class="col-sm-9">
+            <!-- Form -->
+            <form id="formSearchRestaurantById" class="text-center" style="color: #757575;">
+                <!-- Name -->
+                <div class="md-form mt-3">
+                    <input type="text" id="inputSearchRestaurantByName" [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}" name="" class="form-control" mdbInput>
+                    <label for="inputSearchRestaurantByName">Rechercher un restaurant ...</label>
+                </div>
+            </form>
+            <!-- {{list_resto}} -->
+            <!-- | filter-speciality: searchRadio:'takes'  -->
+            <app-resto-list-item  *ngFor="let resto of list_resto | filter : searchText:'name' "
+                                    [name]="resto.name"
+                                    [adresse]="resto.adresse"
+                                    [specialite]="resto.specialite"></app-resto-list-item>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+

@@ -25,6 +25,7 @@ import { FooterComponent } from './footer/footer.component';
 import { CityComponent } from './city/city.component';
 import { SearchVilleComponent } from './search-ville/search-ville.component';
 import { Navbar2Component } from './navbar2/navbar2.component';
+import { RestoVilleComponent } from './resto-ville/resto-ville.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { Navbar2Component } from './navbar2/navbar2.component';
     CityComponent,
     SearchVilleComponent,
     Navbar2Component,
+    RestoVilleComponent,
   ],
   imports: [
     BrowserModule,

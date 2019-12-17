@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { CityComponent } from './city/city.component';
+import {  RestoVilleComponent} from './resto-ville/resto-ville.component';
 
 
 const routes: Routes = [
@@ -13,7 +14,7 @@ const routes: Routes = [
   { path: 'list-restaurant/:departement/:city', component: RestoListComponent},
   { path: 'livraison/:city/:city', component: CityComponent},
   { path: 'speciality/:city/:city', component: CityComponent},
-
+  { path: 'list-restaurant/:address', component: RestoVilleComponent},
 ];
 
 @NgModule({
