@@ -1,43 +1,76 @@
-<mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar intro-fixed-nav" [containerInside]="false">
-    <mdb-navbar-brand>
-      <a class="logo navbar-brand" href="#">
-        <strong>Allo Resto</strong>
-      </a>
-    </mdb-navbar-brand>
-    <links>
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active waves-light" mdbWavesEffect>
-          <a class="nav-link" routerLink="/" routerLinkActive="active">Home
-            <span class="sr-only">(current)</span>
-          </a>
-        </li>
+<!--Navbar-->
+<mdb-navbar
+  SideClass="navbar navbar-expand-lg navbar-dark  justify-content-between ie-nav fixed-top scrolling-navbar"
+  [containerInside]="false"
+>
+  <!-- Navbar brand -->
+  <mdb-navbar-brand>
+    <a class="logo navbar-brand" routerLink="/">
+      <strong>Allo Resto</strong>
+    </a>
+  </mdb-navbar-brand>
 
-        <li class="nav-item waves-light" mdbWavesEffect>
-            <a class="nav-link" routerLink="connecter" routerLinkActive="active" >Se connecter</a>
-          </li>
-        <!-- Dropdown -->
+  <!-- Links -->
+  <links>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a
+          class="nav-link waves-light"
+          routerLink="/connecter"
+          routerLinkActive="active"
+          mdbWavesEffect
+        >
+          Se connecter
+        </a>
+      </li>
+      <!-- Dropdown -->
       <li class="nav-item dropdown" dropdown>
-        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
-          S'inscrire <span class="caret"></span></a>
-        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
-          <a class="dropdown-item waves-light" mdbWavesEffect routerLink="/signup-client" routerLinkActive="active">Client</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect routerLink="/signup-restaurantOwner" routerLinkActive="active">Restaurateur</a>
+        <a
+          dropdownToggle
+          mdbWavesEffect
+          type="button"
+          class="nav-link dropdown-toggle waves-light"
+          mdbWavesEffect
+        >
+          Créer un compte<span class="caret"></span>
+        </a>
+        <div
+          *dropdownMenu
+          class="dropdown-menu dropdown dropdown-primary"
+          role="menu"
+        >
+          <a
+            class="dropdown-item waves-light"
+            mdbWavesEffect
+            routerLink="/signup-client"
+            routerLinkActive="active"
+          >
+            En tant que client
+          </a>
+          <div class="divider dropdown-divider"></div>
+          <a
+            class="dropdown-item waves-light"
+            mdbWavesEffect
+            routerLink="/signup-restaurantOwner"
+            routerLinkActive="active"
+          >
+            En tant que restaurateur
+          </a>
         </div>
       </li>
-        <li class="nav-item waves-light" mdbWavesEffect>
-          <a class="nav-link">Besoin d'aide</a>
-        </li>
-      </ul>
-    </links>
-  </mdb-navbar>
-  <!-- Main -->
-  <div class="view intro-2">
-    <div class="full-bg-img">
-      <div class="mask rgba-purple-light flex-center">
-        <div class="container text-center white-text wow fadeInUp">
-          <app-search></app-search>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- /.Main -->
+      <!-- Dropdown -->
+      <li class="nav-item waves-light">
+        <a
+          class="nav-link waves-light help"
+          routerLink="/help"
+          routerLinkActive="active"
+          mdbWavesEffect
+          (click)="navbar.hide()"
+        >
+          <mdb-icon fas icon="cog"></mdb-icon> Aide
+        </a>
+      </li>
+    </ul>
+  </links>
+  <!-- Links -->
+</mdb-navbar>

@@ -1,16 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
-.intro-2 {
-  background: url("https://mdbootstrap.com/img/Photos/Others/img (40).jpg")no-repeat center center;
+.main-page {
+  background: url("./assets/main_page_pic.jpg") no-repeat center center;
   background-size: cover;
   height: 100vh;
 }
 
-.navbar {
+.navbar .nav-link.active {
   background-color: transparent;
+}
+
+.nav-item .help {
+  color: white !important;
+}
+
+.navbar {
+  background-color: #e83e8c;
 }
 
 .top-nav-collapse {
@@ -19,6 +31,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 @media only screen and (max-width: 768px) {
   .navbar {
-      background-color: #6351ce;
+    background-color: #6351ce;
   }
 }

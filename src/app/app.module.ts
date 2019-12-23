@@ -5,7 +5,8 @@ import { AppRoutingModule } from "./app-routing.module";
 import { FormsModule } from "@angular/forms";
 import { ReactiveFormsModule } from "@angular/forms";
 
-import { MDBBootstrapModule } from "angular-bootstrap-md";
+import { MDBBootstrapModule, NavbarModule } from "angular-bootstrap-md";
+
 import { MatExpansionModule } from "@angular/material/expansion";
 
 import { AppComponent } from "./app.component";
@@ -54,7 +55,8 @@ import { RestaurantComponent } from "./restaurant/restaurant.component";
     GooglePlaceModule,
     ReactiveFormsModule,
     MatExpansionModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NavbarModule
   ],
   providers: [RestoSerivce],
   bootstrap: [AppComponent]

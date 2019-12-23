@@ -24,9 +24,7 @@ const routes: Routes = [
     path:
       "list-restaurant/address/:address/livraison/:livraison/speciality/:speciality",
     component: ListRestaurantComponent
-  },
-  { path: "restaurant", component: RestaurantComponent }
-  // { path: 'restaurant/name/:name/', component: RestaurantComponent},
+  }
 ];
 
 @NgModule({
