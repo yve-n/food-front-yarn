@@ -22,7 +22,7 @@ import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 import { BestSpecialitiesComponent } from "./best-specialities/best-specialities.component";
 import { MainpageComponent } from "./mainpage/mainpage.component";
 import { FooterComponent } from "./footer/footer.component";
-import { ConnecterComponent } from "./connecter/connecter.component";
+import { SigninComponent } from "./signin/connecter.component";
 import { ClientComponent } from "./Client/Client.component";
 import { RestaurantOwnerComponent } from "./RestaurantOwner/RestaurantOwner.component";
 import { DashboardClientComponent } from "./dashboard-client/dashboard-client.component";
@@ -42,7 +42,7 @@ import { PageNotFoundComponent } from "./page-not-found/page-not-found.component
     BestSpecialitiesComponent,
     MainpageComponent,
     FooterComponent,
-    ConnecterComponent,
+    SigninComponent,
     ClientComponent,
     RestaurantOwnerComponent,
     DashboardClientComponent,

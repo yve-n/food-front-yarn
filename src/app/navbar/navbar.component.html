@@ -1,12 +1,12 @@
 <!--Navbar-->
 <mdb-navbar
-  SideClass="navbar navbar-expand-lg navbar-dark justify-content-between ie-nav fixed-top scrolling-navbar"
+  SideClass="navbar navbar-expand-lg navbar-dark  justify-content-between ie-nav fixed-top scrolling-navbar"
   [containerInside]="false"
 >
   <!-- Navbar brand -->
   <mdb-navbar-brand>
-    <a class="logo navbar-brand" routerLink="/">
-      <strong>Allo Resto</strong>
+    <a class="navbar-brand" routerLink="/">
+      <strong>FoodApp</strong>
     </a>
   </mdb-navbar-brand>
 
@@ -16,7 +16,18 @@
       <li class="nav-item">
         <a
           class="nav-link waves-light"
-          routerLink="/connecter"
+          routerLink="/home"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          mdbWavesEffect
+        >
+          Accueil<span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link waves-light"
+          routerLink="/signin"
           routerLinkActive="active"
           mdbWavesEffect
         >
@@ -43,7 +54,6 @@
             class="dropdown-item waves-light"
             mdbWavesEffect
             routerLink="/signup-client"
-            routerLinkActive="active"
           >
             En tant que client
           </a>
