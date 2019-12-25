@@ -27,6 +27,7 @@ import { ClientComponent } from "./Client/Client.component";
 import { RestaurantOwnerComponent } from "./RestaurantOwner/RestaurantOwner.component";
 import { DashboardClientComponent } from "./dashboard-client/dashboard-client.component";
 import { RestaurantComponent } from "./restaurant/restaurant.component";
+import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { RestaurantComponent } from "./restaurant/restaurant.component";
     ClientComponent,
     RestaurantOwnerComponent,
     DashboardClientComponent,
-    RestaurantComponent
+    RestaurantComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

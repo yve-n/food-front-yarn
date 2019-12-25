@@ -11,20 +11,16 @@ body {
   background: url("./assets/main_page_pic.jpg") no-repeat center center;
   background-size: cover;
   height: 100vh;
+  margin-top: -50px;
 }
 
 .navbar .nav-link.active {
-  background-color: transparent;
-}
-
-.nav-item .help {
-  color: white !important;
+  background-color: #7a67e6;
+  //#7d54c496; 7a65f0
 }
 
 .navbar {
   background-color: #6351ce;
-  //#6610f2
-  //#6f42c1
 }
 
 .top-nav-collapse {

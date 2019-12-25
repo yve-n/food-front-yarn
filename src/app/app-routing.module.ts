@@ -7,6 +7,7 @@ import { MainpageComponent } from "./mainpage/mainpage.component";
 import { ConnecterComponent } from "./connecter/connecter.component";
 import { ClientComponent } from "./Client/Client.component";
 import { RestaurantOwnerComponent } from "./RestaurantOwner/RestaurantOwner.component";
+import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 
 const routes: Routes = [
   { path: "", component: MainpageComponent },
@@ -24,7 +25,8 @@ const routes: Routes = [
     path:
       "list-restaurant/address/:address/livraison/:livraison/speciality/:speciality",
     component: ListRestaurantComponent
-  }
+  },
+  { path: "**", component: PageNotFoundComponent }
 ];
 
 @NgModule({
