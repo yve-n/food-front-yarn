@@ -48,10 +48,11 @@
                 <!-- | filter-speciality: searchRadio:'takes'  -->
                 <ul>
                     <li>
-                        <app-resto-list-item  *ngFor="let resto of list_resto | filter : searchText:'name' "
+                        <app-resto-list-item  *ngFor="let resto of list_resto | filter : searchText:'name'; index as restaurantId"
                             [name]="resto.name"
                             [adresse]="resto.adresse"
-                            [specialite]="resto.specialite"></app-resto-list-item>
+                            [specialite]="resto.specialite"
+                            [restaurantId]="restaurantId"></app-resto-list-item>
                     </li>
                     
                 </ul>

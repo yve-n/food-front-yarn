@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'list-restaurant/:address', component: ListRestaurantComponent},
   { path: 'list-restaurant/address/:address/livraison/:livraison', component: ListRestaurantComponent},
   { path: 'list-restaurant/address/:address/livraison/:livraison/speciality/:speciality', component: ListRestaurantComponent},
-  { path: 'restaurant', component: RestaurantComponent},
+  { path: 'restaurant/:id', component: RestaurantComponent},
   // { path: 'restaurant/name/:name/', component: RestaurantComponent},
 ];
 
