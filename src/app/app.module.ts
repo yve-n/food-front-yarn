@@ -40,7 +40,6 @@ import { RestaurantComponent } from './restaurant/restaurant.component';
     BestSpecialitiesComponent,
     MainpageComponent,
     FooterComponent,
-    NavbarNoHomeComponent,
     RestaurantComponent,
   ],
   imports: [
