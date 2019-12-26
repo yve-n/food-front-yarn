@@ -37,10 +37,10 @@ const appRoutes: Routes = [
     redirectTo: "/home",
     pathMatch: "full"
   },
-  { path: "**", component: PageNotFoundComponent },
   { path: "livraison/:city/:city", component: CityComponent },
   { path: "speciality/:city/:city", component: CityComponent },
-  { path: "list-restaurant/:address", component: RestoVilleComponent }
+  { path: "list-restaurant/:address", component: RestoVilleComponent },
+  { path: "**", component: PageNotFoundComponent }
 ];
 
 @NgModule({

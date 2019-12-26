@@ -29,7 +29,6 @@ import { RestaurantComponent } from "./restaurant/restaurant.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { CityComponent } from "./city/city.component";
 import { SearchVilleComponent } from "./search-ville/search-ville.component";
-import { Navbar2Component } from "./navbar2/navbar2.component";
 import { RestoVilleComponent } from "./resto-ville/resto-ville.component";
 
 @NgModule({
@@ -53,7 +52,6 @@ import { RestoVilleComponent } from "./resto-ville/resto-ville.component";
     PageNotFoundComponent,
     CityComponent,
     SearchVilleComponent,
-    Navbar2Component,
     RestoVilleComponent
   ],
   imports: [
