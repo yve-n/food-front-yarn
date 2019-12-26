@@ -5,8 +5,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { FormsModule } from "@angular/forms";
 import { ReactiveFormsModule } from "@angular/forms";
 
-import { MDBBootstrapModule, NavbarModule } from "angular-bootstrap-md";
-
+import { MDBBootstrapModule } from "angular-bootstrap-md";
 import { MatExpansionModule } from "@angular/material/expansion";
 
 import { AppComponent } from "./app.component";
@@ -22,12 +21,16 @@ import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 import { BestSpecialitiesComponent } from "./best-specialities/best-specialities.component";
 import { MainpageComponent } from "./mainpage/mainpage.component";
 import { FooterComponent } from "./footer/footer.component";
-import { SigninComponent } from "./signin/connecter.component";
+import { SigninComponent } from "./signin/signin.component";
 import { ClientComponent } from "./Client/Client.component";
 import { RestaurantOwnerComponent } from "./RestaurantOwner/RestaurantOwner.component";
 import { DashboardClientComponent } from "./dashboard-client/dashboard-client.component";
 import { RestaurantComponent } from "./restaurant/restaurant.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
+import { CityComponent } from "./city/city.component";
+import { SearchVilleComponent } from "./search-ville/search-ville.component";
+import { Navbar2Component } from "./navbar2/navbar2.component";
+import { RestoVilleComponent } from "./resto-ville/resto-ville.component";
 
 @NgModule({
   declarations: [
@@ -47,7 +50,11 @@ import { PageNotFoundComponent } from "./page-not-found/page-not-found.component
     RestaurantOwnerComponent,
     DashboardClientComponent,
     RestaurantComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CityComponent,
+    SearchVilleComponent,
+    Navbar2Component,
+    RestoVilleComponent
   ],
   imports: [
     BrowserModule,
@@ -57,8 +64,7 @@ import { PageNotFoundComponent } from "./page-not-found/page-not-found.component
     GooglePlaceModule,
     ReactiveFormsModule,
     MatExpansionModule,
-    BrowserAnimationsModule,
-    NavbarModule
+    BrowserAnimationsModule
   ],
   providers: [RestoSerivce],
   bootstrap: [AppComponent]
