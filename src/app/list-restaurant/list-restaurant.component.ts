@@ -27,27 +27,37 @@ export class ListRestaurantComponent implements OnInit {
     this.address = this.route.snapshot.params['address'];
     this.livraison = this.route.snapshot.params['livraison'];
     this.speciality = this.route.snapshot.params['speciality'];
+    console.log("onInit from list-restaurant");
+
   }
 
   onGetTakeAway(event: any){
-    // this.list_resto = this.restoService.list_resto2;
-    this.router.navigate(['list-restaurant', "address",this.address, "livraison",event, "speciality",""]);
+    this.list_resto = this.restoService.list_resto2;
+    console.log("onGetTakeAway from list-restaurant",event);
+    // this.router.navigate(['list-restaurant', "address",this.address, "livraison",event, "speciality",""]);
     
   }
 
   onGetNoTakeAway(event: any){
-    // this.list_resto = this.restoService.list_resto3;
-    this.router.navigate(['list-restaurant', "address",this.address, "livraison",event, "speciality",""]);
+    this.list_resto = this.restoService.list_resto3;
+    console.log("onGetNoTakeAway from list-restaurant",event);
+    // this.router.navigate(['list-restaurant', "address",this.address, "livraison",event, "speciality",""]);
   }
 
   onGetSpeciality(event: any){
     if (event==1) {
-      // this.list_resto = this.restoService.list_resto3;
-      this.router.navigate(['list-restaurant', "address",this.address, "livraison",this.livraison, "speciality",event]);
+      this.list_resto = this.restoService.list_resto3;
+      console.log("onGetSpeciality 1 from list-restaurant",event);
+      // this.router.navigate(['list-restaurant', "address",this.address, "livraison",this.livraison, "speciality",event]);
+      console.log("onGetSpeciality 1 from list-restaurant",event);
     } else if (event==2) {
-      this.router.navigate(['list-restaurant', "address",this.address, "livraison",this.livraison, "speciality",event]);
+      this.list_resto = this.restoService.list_resto2;
+      console.log("onGetSpeciality 2 from list-restaurant",event);
+      // this.router.navigate(['list-restaurant', "address",this.address, "livraison",this.livraison, "speciality",event]);
     }else{
-      this.router.navigate(['list-restaurant', "address",this.address, "livraison",this.livraison, "speciality",event]);
+      this.list_resto = this.restoService.list_resto;
+      console.log("onGetSpeciality 3 from list-restaurant",event);
+      // this.router.navigate(['list-restaurant', "address",this.address, "livraison",this.livraison, "speciality",event]);
     }
   }
 

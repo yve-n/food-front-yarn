@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatTabsModule } from '@angular/material';
+import {MatListModule} from '@angular/material/list';
 
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
@@ -21,7 +23,6 @@ import { BestSpecialitiesComponent } from './best-specialities/best-specialities
 
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { FooterComponent } from './footer/footer.component';
-import { NavbarNoHomeComponent } from './navbar-no-home/navbar-no-home.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
 
 
@@ -51,6 +52,8 @@ import { RestaurantComponent } from './restaurant/restaurant.component';
     ReactiveFormsModule,
     MatExpansionModule,
     BrowserAnimationsModule,
+    MatTabsModule,
+    MatListModule
   ],
   providers: [
     RestoSerivce

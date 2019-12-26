@@ -1,7 +1,4 @@
-import { RestoSerivce } from './services/resto.service';
-import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import {ViewChild}  from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,32 +6,10 @@ import {ViewChild}  from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
 
-  title = 'food-app';
+  constructor() { }
 
-  list_resto: any [];
+  ngOnInit() {}
 
-  page = "home"
-
-  constructor(private restoService: RestoSerivce, private route:ActivatedRoute) { }
-
-  ngOnInit() {
-    this.list_resto = this.restoService.list_resto;
-  }
-
-  onGetTakeAway(){
-    this.list_resto = this.restoService.list_resto2;
-  }
-
-  onGetNoTakeAway(){
-    this.list_resto = this.restoService.list_resto2;
-  }
-
-
-
-
-  lat:number =-33.785809;
-  lng: number =151.121195;
 }
-

@@ -23,6 +23,9 @@ export class SearchComponent implements OnInit {
       }
   }
 
+  lat:number =-33.785809;
+  lng: number =151.121195;
+
   addressFixe: string;
 
   livraison= "take_away";
@@ -32,9 +35,11 @@ export class SearchComponent implements OnInit {
   }
 
   public handleAddressChange(address: any) {
+    console.log("handleAddressChange from search");
     this.formattedAddress=address.address_components[2].long_name;
     this.router.navigate(['list-restaurant/'+this.formattedAddress]);
     // this.router.navigate(['list-restaurant', "address",this.formattedAddress]);
+    console.log("handleAddressChange from search",this.formattedAddress);
   }
 
 
