@@ -4,7 +4,8 @@ import { NgModule } from "@angular/core";
 import { AppRoutingModule } from "./app-routing.module";
 import { FormsModule } from "@angular/forms";
 import { ReactiveFormsModule } from "@angular/forms";
-
+import { MatTabsModule } from "@angular/material";
+import { MatListModule } from "@angular/material/list";
 import { MDBBootstrapModule } from "angular-bootstrap-md";
 import { MatExpansionModule } from "@angular/material/expansion";
 
@@ -47,7 +48,6 @@ import { RestoVilleComponent } from "./resto-ville/resto-ville.component";
     SigninComponent,
     ClientComponent,
     RestaurantOwnerComponent,
-    DashboardClientComponent,
     RestaurantComponent,
     PageNotFoundComponent,
     CityComponent,
@@ -62,7 +62,9 @@ import { RestoVilleComponent } from "./resto-ville/resto-ville.component";
     GooglePlaceModule,
     ReactiveFormsModule,
     MatExpansionModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatTabsModule,
+    MatListModule
   ],
   providers: [RestoSerivce],
   bootstrap: [AppComponent]

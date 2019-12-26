@@ -13,6 +13,7 @@ export class ListRestaurantItemComponent implements OnInit {
   @Input() duree_livraison: string;
   @Input() specialite: string;
   @Input() takes: string;
+  @Input() restaurantId: string;
 
   // @Input() list_resto;
 

@@ -1,175 +1,135 @@
 <div class="container">
-  <div class="row">
-    <div class="col-lg-2">
-      <img
-        src="../../assets/images/image_burger.jpg"
-        alt="logo_restaurant"
-        class="img-fluid rounded mx-auto d-block text-center"
-        width="100"
-      />
-    </div>
-    <div class="col-lg-4">
-      <h5>Nom du restaurant</h5>
-      <span>Ouverture maintenant</span> <br />
+    <div class="row">
+        <div class="col-lg-2">
+            <img src="../../assets/images/image_burger.jpg" alt="logo_restaurant" class="img-fluid rounded mx-auto d-block text-center" width="100">
+        </div>
+        <div class="col-lg-4">
+            <h5>Nom du restaurant</h5> <span>Ouverture maintenant</span> <br>
 
-      <p>
-        <mdb-icon fas icon="star"></mdb-icon>
-        <mdb-icon fas icon="star"></mdb-icon>
-        <mdb-icon fas icon="star"></mdb-icon>
-        <mdb-icon fas icon="star"></mdb-icon> (59 avis)
-      </p>
-      <span
-        >Spécialités : Kebab <b class="middle-dot">&#183;</b> Pizza
-        <b class="middle-dot">&#183;</b> Sandwich</span
-      >
+            <p>
+                <mdb-icon fas icon="star"></mdb-icon>
+                <mdb-icon fas icon="star"></mdb-icon>
+                <mdb-icon fas icon="star"></mdb-icon>
+                <mdb-icon fas icon="star"></mdb-icon> (59 avis)
+            </p>
+            <span>Spécialités : Kebab <b class="middle-dot">&#183;</b> Pizza <b class="middle-dot">&#183;</b> Sandwich</span>
+
+        </div>
+        <div class="col-lg-1">
+
+        </div>
+        <div class="col-lg-5">
+            <p class="p-address-restaurant">Adresse du restaurant : 107 Rue Manin, 75019 PARIS 19</p>
+            <div class="row div-info-prix">
+                <div class="col-lg-4">
+                    <p class="p-prix-minimum">0,50 &euro; <br> Minimum de commande </p>
+                </div>
+                <div class="col-lg-4">
+                    <p>0,50 &euro; <br> Frais de livraison </p>
+                </div>
+                <div class="col-lg-4">
+                    <p>0,50 &euro; <br> Délai de livraison </p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-lg-1"></div>
-    <div class="col-lg-5">
-      <p class="p-address-restaurant">
-        Adresse du restaurant : 107 Rue Manin, 75019 PARIS 19
-      </p>
-      <div class="row div-info-prix">
-        <div class="col-lg-4">
-          <p class="p-prix-minimum">
-            0,50 &euro; <br />
-            Minimum de commande
-          </p>
-        </div>
-        <div class="col-lg-4">
-          <p>
-            0,50 &euro; <br />
-            Frais de livraison
-          </p>
-        </div>
-        <div class="col-lg-4">
-          <p>
-            0,50 &euro; <br />
-            Délai de livraison
-          </p>
+    <hr>
+    <div class="row">
+
+      <!-- <div class="col-3">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+          <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+          <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+          <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
         </div>
       </div>
-    </div>
-  </div>
-  <hr />
-  <div class="row">
-    <div class="col-lg-3">
-      <p class="p-card">Meilleures ventes du moment</p>
-      <p class="p-card">Menus</p>
-      <p class="p-card">Pizza Juniors</p>
-      <p class="p-card">Menu Tacos</p>
-      <p class="p-card">Assietes</p>
-      <p class="p-card">Desserts</p>
-    </div>
-    <div class="col-lg-5">
-      <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item">
-          <a
-            class="nav-link active"
-            id="menu-tab"
-            data-toggle="tab"
-            href="#"
-            role="tab"
-            aria-controls="menu"
-            aria-selected="true"
-            >Menu</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            id="avis-tab"
-            data-toggle="tab"
-            href="#"
-            role="tab"
-            aria-controls="avis"
-            aria-selected="false"
-            >Avis</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            id="infos-tab"
-            data-toggle="tab"
-            href="#"
-            role="tab"
-            aria-controls="infos"
-            aria-selected="false"
-            >Infos</a
-          >
-        </li>
-      </ul>
-      <div class="tab-content" id="myTabContent">
-        <div
-          class="tab-pane fade show active"
-          id="menu"
-          role="tabpanel"
-          aria-labelledby="menu-tab"
-        >
-          <div class="row">
-            <mat-accordion>
-              <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                  <mat-panel-title>
-                    Offre speciale : 2 pour 1
-                  </mat-panel-title>
-                  <mat-panel-description>
-                    les offres speciales
-                  </mat-panel-description>
-                </mat-expansion-panel-header>
-                <h4>les offres speciales</h4>
-              </mat-expansion-panel>
+      <div class="col-9">
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">...</div>
+          <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
+          <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+          <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+        </div>
+      </div> -->
 
-              <mat-expansion-panel
-                (opened)="panelOpenState = true"
-                (closed)="panelOpenState = false"
-              >
-                <mat-expansion-panel-header>
-                  <mat-panel-title>
-                    Amis Hours
-                  </mat-panel-title>
-                  <mat-panel-description>
-                    Currently I am {{ panelOpenState ? "open" : "closed" }}
-                  </mat-panel-description>
-                </mat-expansion-panel-header>
-                <p>Amis Hours</p>
-              </mat-expansion-panel>
-            </mat-accordion>
+      <mat-nav-list role="tablist">
+        <a mat-list-item href="#home" role="tab" data-toggle="pill">Offres specialles</a>
+      </mat-nav-list>
+
+        <!-- <div class="col-lg-3">
+          <div class="nav nav-tabs" id="myTab" role="tablist">
+            <a class="nav-link active"id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
           </div>
+        </div> -->
+
+        <div class="col-lg-6">
+
+          <mat-tab-group>
+            <mat-tab label="Menu">
+
+              <div class="tab-content">
+                <mat-accordion>
+                  <mat-expansion-panel class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Offre speciale : 2 pour 1
+                      </mat-panel-title>
+                      <mat-panel-description>
+                        les offres speciales
+                      </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <h4>les offres speciales</h4>
+                  </mat-expansion-panel>
+
+                  <mat-expansion-panel (opened)="panelOpenState = true"
+                                      (closed)="panelOpenState = false" class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Amis Hours
+                      </mat-panel-title>
+                      <mat-panel-description>
+                        Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                      </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <p>Amis Hours</p>
+                  </mat-expansion-panel>
+
+                </mat-accordion>
+            </div>
+
+            </mat-tab>
+            <mat-tab label="Avis"> Content 2 </mat-tab>
+            <mat-tab label="Infos"> Content 3 </mat-tab>
+          </mat-tab-group>
+
         </div>
-        <div
-          class="tab-pane fade"
-          id="avis"
-          role="tabpanel"
-          aria-labelledby="avis-tab"
-        >
-          ...
-        </div>
-        <div
-          class="tab-pane fade"
-          id="infos"
-          role="tabpanel"
-          aria-labelledby="infos-tab"
-        >
-          ...
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4">
-      <button type="button" mdbBtn color="light" mdbWavesEffect>
-        Commmander
-      </button>
-      <mdb-card>
-        <mdb-card-header>Votre panier</mdb-card-header>
-        <ul class="list-group list-group-flush">
-          <!-- <li class="list-group-item">Cras justo odio</li>
+
+        <div class="col-lg-3">
+            <button type="button" mdbBtn color="light" mdbWavesEffect> Commmander </button>
+            <mdb-card>
+                <mdb-card-header>Votre panier</mdb-card-header>
+                <ul class="list-group list-group-flush">
+                  <!-- <li class="list-group-item">Cras justo odio</li>
                   <li class="list-group-item">Dapibus ac facilisis in</li>
                   <li class="list-group-item">Vestibulum at eros</li> -->
-        </ul>
-      </mdb-card>
-      <button type="button" mdbBtn color="light" mdbWavesEffect>
-        Commmander
-      </button>
+                </ul>
+              </mdb-card>
+            <button type="button" mdbBtn color="light" mdbWavesEffect> Commmander </button>
+        </div>
     </div>
-  </div>
 </div>
+
+<!-- <mat-tab-group dynamicHeight>
+  <mat-tab label="Short tab">
+    <div class="example-small-box mat-elevation-z4">
+      Small content
+    </div>
+  </mat-tab>
+  <mat-tab label="Long tab">
+    <div class="example-large-box mat-elevation-z4">
+      Large content
+    </div>
+  </mat-tab>
+</mat-tab-group> -->

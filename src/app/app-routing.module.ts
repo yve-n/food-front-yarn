@@ -28,7 +28,7 @@ const appRoutes: Routes = [
     component: ListRestaurantComponent
   },
   {
-    path: "restaurant",
+    path: "restaurant/:id",
     component: RestaurantComponent,
     data: { title: "Detail restaurant" }
   },
