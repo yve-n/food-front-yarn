@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RestaurantOwnerComponent } from './RestaurantOwner.component';
+import { RestaurantOwnerComponent } from './restaurantOwner.component';
 
 describe('CompteRestoComponent', () => {
   let component: RestaurantOwnerComponent;

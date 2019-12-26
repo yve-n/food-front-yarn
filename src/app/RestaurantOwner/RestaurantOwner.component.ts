@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-RestaurantOwner',
-  templateUrl: './RestaurantOwner.component.html',
-  styleUrls: ['./RestaurantOwner.component.scss']
+  selector: 'app-restaurantOwner',
+  templateUrl: './restaurantOwner.component.html',
+  styleUrls: ['./restaurantOwner.component.scss']
 })
 export class RestaurantOwnerComponent implements OnInit {
 

@@ -22,8 +22,8 @@ import { BestSpecialitiesComponent } from "./best-specialities/best-specialities
 import { MainpageComponent } from "./mainpage/mainpage.component";
 import { FooterComponent } from "./footer/footer.component";
 import { SigninComponent } from "./signin/signin.component";
-import { ClientComponent } from "./Client/Client.component";
-import { RestaurantOwnerComponent } from "./RestaurantOwner/RestaurantOwner.component";
+import { ClientComponent } from "./client/client.component";
+import { RestaurantOwnerComponent } from "./restaurantOwner/restaurantOwner.component";
 import { DashboardClientComponent } from "./dashboard-client/dashboard-client.component";
 import { RestaurantComponent } from "./restaurant/restaurant.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";

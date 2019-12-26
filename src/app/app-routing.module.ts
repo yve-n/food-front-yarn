@@ -7,8 +7,8 @@ import { RestaurantComponent } from "./restaurant/restaurant.component";
 import { ListRestaurantComponent } from "./list-restaurant/list-restaurant.component";
 import { MainpageComponent } from "./mainpage/mainpage.component";
 import { SigninComponent } from "./signin/signin.component";
-import { ClientComponent } from "./Client/Client.component";
-import { RestaurantOwnerComponent } from "./RestaurantOwner/RestaurantOwner.component";
+import { ClientComponent } from "./client/client.component";
+import { RestaurantOwnerComponent } from "./restaurantOwner/restaurantOwner.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 
 const appRoutes: Routes = [
