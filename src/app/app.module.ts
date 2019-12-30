@@ -1,13 +1,14 @@
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import { AppRoutingModule } from "./app-routing.module";
+import { BrowserModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FormsModule } from "@angular/forms";
 import { ReactiveFormsModule } from "@angular/forms";
 import { MatTabsModule } from "@angular/material";
 import { MatListModule } from "@angular/material/list";
 import { MDBBootstrapModule } from "angular-bootstrap-md";
 import { MatExpansionModule } from "@angular/material/expansion";
+
+import { AppRoutingModule } from "./app-routing.module";
 
 import { AppComponent } from "./app.component";
 import { SearchComponent } from "./search/search.component";

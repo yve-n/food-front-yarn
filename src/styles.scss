@@ -29,7 +29,16 @@ body {
 .top-nav-collapse {
   background-color: #6351ce;
 }
+ .dropdown-item.active,
+.dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #7a65f0;
+}
 
+.navbar .dropdown-menu a.active {
+  color: #fff;
+}
 @media only screen and (max-width: 768px) {
   .navbar {
     background-color: #6351ce;

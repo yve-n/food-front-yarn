@@ -40,7 +40,8 @@ const appRoutes: Routes = [
   { path: "livraison/:city/:city", component: CityComponent },
   { path: "speciality/:city/:city", component: CityComponent },
   { path: "list-restaurant/:address", component: RestoVilleComponent },
-  { path: "**", component: PageNotFoundComponent }
+  { path: "page-not-found", component: PageNotFoundComponent },
+  { path: "**", redirectTo: "/page-not-found" }
 ];
 
 @NgModule({
