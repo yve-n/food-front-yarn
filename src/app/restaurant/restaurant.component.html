@@ -1,10 +1,205 @@
+<!-- Main -->
+<div class="view restaurant-page">
+  <div class="full-bg-img">
+    <div class="mask rgba-purple-light flex-center">
+      <div class="container wow fadeInUp">
+        
+        <div class="col-lg-8">
+          <mdb-card>
+            <mdb-card-body>
+
+              <div class="row">
+                <div class="col-lg-4">
+                  <img src="../../assets/images/image_burger.jpg" alt="logo_restaurant" class="img-fluid rounded d-block text-center" width="150">
+                </div>
+                <div class="col-lg-8">
+                  <mdb-card-title>
+                    <h4>{{resto.name}}</h4>
+                  </mdb-card-title>
+                  <mdb-card-text>
+                  </mdb-card-text>
+                  <p>
+                    <mdb-icon fas icon="star"></mdb-icon>
+                    <mdb-icon fas icon="star"></mdb-icon>
+                    <mdb-icon fas icon="star"></mdb-icon>
+                    <mdb-icon fas icon="star"></mdb-icon>
+                    <mdb-icon far icon="star"></mdb-icon> (59 avis)
+                  </p>
+                  <span *ngFor="let specialite of resto.specialite"> {{specialite}} <b class="middle-dot">&#183;</b> </span> 
+                  <p class="p-address-restaurant"> {{resto.adresse}} </p>
+                  <!-- <div class="flex-row">
+                    <a class="card-link">Card link</a>
+                    <a class="card-link">Another link</a>
+                  </div> -->
+                  
+                </div>
+              </div>
+            </mdb-card-body>
+          </mdb-card>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row mx-auto">
+    <mat-tab-group mat-align-tabs="center" dynamicHeight>
+      <mat-tab label="First"> 
+        <ng-template matTabContent>
+          <div class="row mb-3">
+            <div class="col-md-3 col-sm-6">
+              <mdb-card>
+                <mdb-card-img src="../../assets/main_page_pic.jpg"></mdb-card-img>
+                <mdb-card-body>
+                  <mdb-card-title>
+                    <h5>Menu B9 </h5>
+                  </mdb-card-title>
+                  <mdb-card-text>1 big burger et giant burger, servi avec frites et boisson 33 cl.</mdb-card-text>
+                  <div class="d-flex">
+                    <h6 class="text-muted mb-2">Prix</h6>
+                    <a mdbBtn color="unique" class="waves-light ml-auto" size="sm" mdbWavesEffect>Ajouter</a>
+                  </div>
+                </mdb-card-body>
+              </mdb-card>
+        
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <mdb-card>
+                <mdb-card-img src="../../assets/main_page_pic.jpg"></mdb-card-img>
+                <mdb-card-body>
+                  <mdb-card-title>
+                    <h5>Pizza Junior</h5>
+                  </mdb-card-title>
+                  <mdb-card-text>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.</mdb-card-text>
+                  <!-- <div class="flex-row">
+                    <a class="card-link">Card link</a>
+                    <a class="card-link">Another link</a>
+                  </div> -->
+                  <div class="d-flex">
+                    <h6 class="text-muted mb-2">Prix</h6>
+                    <a mdbBtn color="unique" class="waves-light ml-auto" size="sm" mdbWavesEffect>Ajouter</a>
+                  </div>
+                </mdb-card-body>
+              </mdb-card>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <mdb-card>
+                <mdb-card-img src="../../assets/main_page_pic.jpg"></mdb-card-img>
+                <mdb-card-body>
+                  <mdb-card-title>
+                    <h5>Burguer saucice</h5>
+                  </mdb-card-title>
+                  <mdb-card-text>1 big burger et giant burger, servi avec frites et boisson 33 cl.</mdb-card-text>
+                  <div class="d-flex">
+                    <h6 class="text-muted mb-2">Prix</h6>
+                    <a mdbBtn color="unique" class="waves-light ml-auto" size="sm" mdbWavesEffect>Ajouter</a>
+                  </div>
+                </mdb-card-body>
+              </mdb-card>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <mdb-card>
+                <mdb-card-img src="../../assets/main_page_pic.jpg"></mdb-card-img>
+                <mdb-card-body>
+                  <mdb-card-title>
+                    <h5>Burguer saucice</h5>
+                  </mdb-card-title>
+                  <mdb-card-text>1 big burger et giant burger, servi avec frites et boisson 33 cl.</mdb-card-text>
+                  <div class="d-flex">
+                    <h6 class="text-muted mb-2">Prix</h6>
+                    <a mdbBtn color="unique" class="waves-light ml-auto" size="sm" mdbWavesEffect>Ajouter</a>
+                  </div>
+                </mdb-card-body>
+              </mdb-card>
+            </div>
+          </div>
+        </ng-template>
+      </mat-tab>
+      <mat-tab label="Second"> 
+        <ng-template matTabContent>
+          <div class="row mb-3">
+            <div class="col-md-3 col-sm-6">
+              <mdb-card>
+                <mdb-card-img src="../../assets/main_page_pic.jpg"></mdb-card-img>
+                <mdb-card-body>
+                  <mdb-card-title>
+                    <h5>Menu B9 </h5>
+                  </mdb-card-title>
+                  <mdb-card-text>1 big burger et giant burger, servi avec frites et boisson 33 cl.</mdb-card-text>
+                  <div class="d-flex">
+                    <h6 class="text-muted mb-2">Prix</h6>
+                    <a mdbBtn color="unique" class="waves-light ml-auto" size="sm" mdbWavesEffect>Ajouter</a>
+                  </div>
+                </mdb-card-body>
+              </mdb-card>
+        
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <mdb-card>
+                <mdb-card-img src="../../assets/main_page_pic.jpg"></mdb-card-img>
+                <mdb-card-body>
+                  <mdb-card-title>
+                    <h5>Pizza Junior</h5>
+                  </mdb-card-title>
+                  <mdb-card-text>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.</mdb-card-text>
+                  <!-- <div class="flex-row">
+                    <a class="card-link">Card link</a>
+                    <a class="card-link">Another link</a>
+                  </div> -->
+                  <div class="d-flex">
+                    <h6 class="text-muted mb-2">Prix</h6>
+                    <a mdbBtn color="unique" class="waves-light ml-auto" size="sm" mdbWavesEffect>Ajouter</a>
+                  </div>
+                </mdb-card-body>
+              </mdb-card>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <mdb-card>
+                <mdb-card-img src="../../assets/main_page_pic.jpg"></mdb-card-img>
+                <mdb-card-body>
+                  <mdb-card-title>
+                    <h5>Burguer saucice</h5>
+                  </mdb-card-title>
+                  <mdb-card-text>1 big burger et giant burger, servi avec frites et boisson 33 cl.</mdb-card-text>
+                  <div class="d-flex">
+                    <h6 class="text-muted mb-2">Prix</h6>
+                    <a mdbBtn color="unique" class="waves-light ml-auto" size="sm" mdbWavesEffect>Ajouter</a>
+                  </div>
+                </mdb-card-body>
+              </mdb-card>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <mdb-card>
+                <mdb-card-img src="../../assets/main_page_pic.jpg"></mdb-card-img>
+                <mdb-card-body>
+                  <mdb-card-title>
+                    <h5>Burguer saucice</h5>
+                  </mdb-card-title>
+                  <mdb-card-text>1 big burger et giant burger, servi avec frites et boisson 33 cl.</mdb-card-text>
+                  <div class="d-flex">
+                    <h6 class="text-muted mb-2">Prix</h6>
+                    <a mdbBtn color="unique" class="waves-light ml-auto" size="sm" mdbWavesEffect>Ajouter</a>
+                  </div>
+                </mdb-card-body>
+              </mdb-card>
+            </div>
+          </div>
+        </ng-template>
+      </mat-tab>
+    </mat-tab-group>
+    
+  </div>
+</div>
+
 <div class="container">
-    <div class="row">
+    <!-- <div class="row">
         <div class="col-lg-2">
             <img src="../../assets/images/image_burger.jpg" alt="logo_restaurant" class="img-fluid rounded mx-auto d-block text-center" width="100">
         </div>
         <div class="col-lg-4">
-            <h5>Nom du restaurant</h5> <span>Ouverture maintenant</span> <br>
+            <h5> {{resto.name}} </h5> <span>Ouverture maintenant</span> <br>
 
             <p>
                 <mdb-icon fas icon="star"></mdb-icon>
@@ -12,91 +207,114 @@
                 <mdb-icon fas icon="star"></mdb-icon>
                 <mdb-icon fas icon="star"></mdb-icon> (59 avis)
             </p>
-            <span>Spécialités : Kebab <b class="middle-dot">&#183;</b> Pizza <b class="middle-dot">&#183;</b> Sandwich</span>
+            <span *ngFor="let specialite of resto.specialite"> {{specialite}} <b class="middle-dot">&#183;</b> </span> <br>
 
         </div>
         <div class="col-lg-1">
-
         </div>
         <div class="col-lg-5">
-            <p class="p-address-restaurant">Adresse du restaurant : 107 Rue Manin, 75019 PARIS 19</p>
+            <p class="p-address-restaurant"> {{resto.adresse}} </p>
             <div class="row div-info-prix">
                 <div class="col-lg-4">
-                    <p class="p-prix-minimum">0,50 &euro; <br> Minimum de commande </p>
+                    <p class="p-prix-minimum"> <b>0,50</b> &euro; <br> Minimum de commande </p>
                 </div>
                 <div class="col-lg-4">
-                    <p>0,50 &euro; <br> Frais de livraison </p>
+                    <p> <b> 0,50</b> &euro; <br> Frais de livraison </p>
                 </div>
                 <div class="col-lg-4">
-                    <p>0,50 &euro; <br> Délai de livraison </p>
+                    <p> <b> 0,50</b> &euro; <br> Délai de livraison </p>
                 </div>
             </div>
         </div>
     </div>
-    <hr>
-    <div class="row">
+     -->
 
-      <!-- <div class="col-3">
-        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-          <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
-          <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
-          <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
-          <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+    <!-- <div class="row">
+        <div class="col-lg-2">
+          <mat-nav-list role="tablist">
+            <a mat-list-item (click)="scrollTo('section1')" role="tab" data-toggle="pill">Ventes du moment</a>
+            <a mat-list-item (click)="scrollTo('section2')" role="tab" data-toggle="pill">Pizza Junior</a>
+          </mat-nav-list>    
         </div>
-      </div>
-      <div class="col-9">
-        <div class="tab-content" id="v-pills-tabContent">
-          <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">...</div>
-          <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
-          <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
-          <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
-        </div>
-      </div> -->
 
-      <mat-nav-list role="tablist">
-        <a mat-list-item href="#home" role="tab" data-toggle="pill">Offres specialles</a>
-      </mat-nav-list>
-
-        <!-- <div class="col-lg-3">
-          <div class="nav nav-tabs" id="myTab" role="tablist">
-            <a class="nav-link active"id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
-            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
-          </div>
-        </div> -->
-
-        <div class="col-lg-6">
+        <div class="col-lg-7">
 
           <mat-tab-group>
             <mat-tab label="Menu">
 
               <div class="tab-content">
-                <mat-accordion>
-                  <mat-expansion-panel class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <mat-accordion id="section1">
+                  <mat-expansion-panel (opened)="panelOpenState = true" class="item" role="tabpanel" aria-labelledby="home-tab">
                     <mat-expansion-panel-header>
                       <mat-panel-title>
-                        Offre speciale : 2 pour 1
+                        Les meilleurs ventes du moment
                       </mat-panel-title>
                       <mat-panel-description>
-                        les offres speciales
                       </mat-panel-description>
                     </mat-expansion-panel-header>
-                    <h4>les offres speciales</h4>
-                  </mat-expansion-panel>
+                    <div class="divider dropdown-divider"></div>
+                    <div class="d-flex">
+                      <div class="mr-auto">
+                        <h6> <b>Promo senior</b> </h6>
+                        <p>2 pizza senior au choix + 1 maxi coca cola 1.5</p>
+                      </div>
+                      <a mdbBtn floating="true" size="lg" gradient="" mdbWavesEffect>
+                        <mdb-icon fas icon="plus-square"></mdb-icon>
+                      </a>
+                    </div>
 
-                  <mat-expansion-panel (opened)="panelOpenState = true"
-                                      (closed)="panelOpenState = false" class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                    <mat-expansion-panel-header>
-                      <mat-panel-title>
-                        Amis Hours
-                      </mat-panel-title>
-                      <mat-panel-description>
-                        Currently I am {{panelOpenState ? 'open' : 'closed'}}
-                      </mat-panel-description>
-                    </mat-expansion-panel-header>
-                    <p>Amis Hours</p>
+                    <div class="divider dropdown-divider"></div>
+                    <div class="d-flex">
+                      <div class="mr-auto">
+                        <h6> <b>Pizza maison Junior</b> </h6>
+                        <p>Crème Fraîche, Mozzarella, Jambon de dinde, Chèvre, Champignons</p>
+                      </div>
+                      <a mdbBtn floating="true" size="lg" gradient="" mdbWavesEffect>
+                        <mdb-icon fas icon="plus-square"></mdb-icon>
+                      </a>
+                    </div>
+
                   </mat-expansion-panel>
 
                 </mat-accordion>
+
+                <mat-accordion id="section2">
+                  <mat-expansion-panel (opened)="panelOpenState = true" class="item" role="tabpanel" aria-labelledby="profile-tab">
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Pizza Junior 2
+                      </mat-panel-title>
+                      <mat-panel-description>
+                      </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    
+                    <div class="divider dropdown-divider"></div>
+
+                    <div class="d-flex">
+                      <div class="mr-auto">
+                        <h6> <b>Promo senior</b> </h6>
+                        <p>2 pizza senior au choix + 1 maxi coca cola 1.5</p>
+                      </div>
+                      <a mdbBtn floating="true" size="lg" gradient="" mdbWavesEffect>
+                        <mdb-icon fas icon="plus-square"></mdb-icon>
+                      </a>
+                    </div>
+
+                    <div class="divider dropdown-divider"></div>
+
+                    <div class="d-flex">
+                      <div class="mr-auto">
+                        <h6> <b>Pizza maison Junior</b> </h6>
+                        <p>Crème Fraîche, Mozzarella, Jambon de dinde, Chèvre, Champignons</p>
+                      </div>
+                      <a mdbBtn floating="true" size="lg" gradient="" mdbWavesEffect>
+                        <mdb-icon fas icon="plus-square"></mdb-icon>
+                      </a>
+                    </div>
+
+                  </mat-expansion-panel>
+                </mat-accordion>
+
             </div>
 
             </mat-tab>
@@ -106,30 +324,5 @@
 
         </div>
 
-        <div class="col-lg-3">
-            <button type="button" mdbBtn color="light" mdbWavesEffect> Commmander </button>
-            <mdb-card>
-                <mdb-card-header>Votre panier</mdb-card-header>
-                <ul class="list-group list-group-flush">
-                  <!-- <li class="list-group-item">Cras justo odio</li>
-                  <li class="list-group-item">Dapibus ac facilisis in</li>
-                  <li class="list-group-item">Vestibulum at eros</li> -->
-                </ul>
-              </mdb-card>
-            <button type="button" mdbBtn color="light" mdbWavesEffect> Commmander </button>
-        </div>
-    </div>
+    </div> -->
 </div>
-
-<!-- <mat-tab-group dynamicHeight>
-  <mat-tab label="Short tab">
-    <div class="example-small-box mat-elevation-z4">
-      Small content
-    </div>
-  </mat-tab>
-  <mat-tab label="Long tab">
-    <div class="example-large-box mat-elevation-z4">
-      Large content
-    </div>
-  </mat-tab>
-</mat-tab-group> -->
