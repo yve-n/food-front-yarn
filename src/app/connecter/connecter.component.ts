@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder,Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-connecter',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConnecterComponent implements OnInit {
 
-  constructor() { }
-
+  connectForm: FormGroup;
+  constructor(private fb: FormBuilder) {}
   ngOnInit() {
+    this.connectForm = this.fb.group({
+      account: this.fb.group({
+        email: ['', Validators.required],
+        password: ['', Validators.required]
+      })
+    });
   }
-
+  onSubmit({ value, valid }: { value: connectForm, valid: boolean }) {
+    console.log(value, valid);
+  }
 }

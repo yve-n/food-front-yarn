@@ -3,7 +3,7 @@
     <div class="col-lg-8">
      
           <!-- Default form login -->
-      <form class=" border border-light p-5">
+      <form novalidate [formGroup]="connectForm"  (ngSubmit)="onSubmit(connectForm)" class="border border-light p-5">
       
             <p class="h4 mb-4"> Connexion</p>
               <div class="icon button" >
@@ -21,9 +21,27 @@
              </div>   
              
           <!-- Email -->
-                <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+          <div formGroupName="account" class="form-group">
+            <label for="email">Adresse mail*</label>
+                <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Votre adresse mail ici" formControlName="email">
+          </div>
+           <div 
+          *ngIf="connectForm.get('account').get('email').hasError('required') && connectForm.get('account').get('email').touched" class="alert alert-danger">
+              
+                     email is required.
+              
+        </div>
+
           <!-- Password -->
-                <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Mot de passe">
+          <div formGroupName="account" class="form-group">
+            <label for="password">Mot de passe*</label>
+                <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Votre mot de passe ici" formControlName="password">
+          </div>
+           <div 
+          *ngIf="connectForm.get('account').get('password').hasError('required') && connectForm.get('account').get('password').touched" class="alert alert-danger">
+                     password is required.
+        </div>
+
               <div class="d-flex justify-content-around">
                    <div>
                     <!-- Remember me -->
@@ -36,8 +54,8 @@
               </div>
         
             <!-- Sign in button -->
-                <button mdbBtn color="primary" block="true" class="my-4" type="submit">Se connecter</button>
-        
+                <button [disabled]="connectForm.pristine || connectForm.invalid" mdbBtn color="primary" block="true" class="my-4" type="submit">Se connecter</button>
+                
              <!-- Register -->
               <p class="text-center">Vous n'avez pas de compte?
                    <a routerLink="/signup-client" routerLinkActive="active" >S'inscrire</a>

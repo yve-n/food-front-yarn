@@ -3,7 +3,7 @@
         <div class="col-lg-8">
 
               <!-- Default form login -->
-            <form class=" border border-light p-5">
+            <form novalidate [formGroup]="restaurantForm"  (ngSubmit)="onSubmit(restaurantForm)" class="border border-light p-5">
   
                             <p class="h4 mb-4">Inscription</p>  
             
@@ -22,24 +22,53 @@
                                  <div class="col-lg-1 text-center"> ou </div>
                                  <div class="col-lg-5"> <hr> </div>
                              </div>
+             <!--prénom-->
                 <div class="form-group">
-                         <label>Prénom*</label>
-                            <input type="text"  class="form-control mb-4" placeholder="Votre prénom ici">
+                         <label for="firstName">Prénom*</label>
+                            <input type="text"  class="form-control mb-4" placeholder="Votre prénom ici" formControlName="firstName">
                 </div>
+                <div *ngIf="restaurantForm.controls['firstName'].invalid && (restaurantForm.controls['firstName'].dirty || restaurantForm.controls['firstName'].touched)" class="alert alert-danger">
+                  <div *ngIf="restaurantForm.controls['firstName'].errors.required">
+                        firstName is required.
+                  </div>
+                </div>
+
+             <!--Nom-->
                 <div class="form-group">
-                       <label>Nom*</label>
-                             <input type="text"  class="form-control mb-4" placeholder="Votre nom ici">
+                       <label for="lastName">Nom*</label>
+                             <input type="text"  class="form-control mb-4" placeholder="Votre nom ici" formControlName="lastName">
                 </div>
+                <div *ngIf="restaurantForm.controls['lastName'].invalid && (restaurantForm.controls['lastName'].dirty || restaurantForm.controls['lastName'].touched)" class="alert alert-danger">
+                  <div *ngIf="restaurantForm.controls['lastName'].errors.required">
+                        lastName is required.
+                  </div>
+                </div>
+
              <!-- Email -->
                 <div class="form-group">
-                         <label>Email*</label>
-                             <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Votre adresse mail ici">
+                         <label for="email">Email*</label>
+                             <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Votre adresse mail ici" formControlName="email">
                 </div>
+                <div *ngIf="restaurantForm.controls['email'].invalid && (restaurantForm.controls['email'].dirty || restaurantForm.controls['email'].touched)" class="alert alert-danger">
+                  <div *ngIf="restaurantForm.controls['email'].errors.required">
+                        email is required.
+                  </div>
+                </div>
+
+
              <!--phone-->
                 <div class="form-group">
-                        <label>Téléphone portable*</label>
-                            <input type="number"  class="form-control mb-4" placeholder="votre numéro ici">
+                        <label for="number">Téléphone portable*</label>
+                            <input type="number"  class="form-control mb-4" placeholder="votre numéro ici" formControlName="number">
                 </div>
+                <div *ngIf="restaurantForm.controls['number'].invalid && (restaurantForm.controls['number'].dirty || restaurantForm.controls['number'].touched)" class="alert alert-danger">
+                  <div *ngIf="restaurantForm.controls['number'].errors.required">
+                        a phone number is required.
+                  </div>
+                </div>
+
+
+
              <!-- Password -->
                 <!-- <div class="form-group">
                          <label>Mot de passe*</label>
@@ -47,24 +76,48 @@
                 </div> -->
              <!--nom du restaurant-->
                 <div class="form-group">
-                        <label>Nom de mon restaurant*</label>
-                            <input type="text"  class="form-control mb-4" placeholder=" Le nom de mon restaurant ici">
+                        <label for="restaurantName">Nom de mon restaurant*</label>
+                            <input type="text"  class="form-control mb-4" placeholder=" Le nom de mon restaurant ici" formControlName="restaurantName">
                 </div>
+                <div *ngIf="restaurantForm.controls['restaurantName'].invalid && (restaurantForm.controls['restaurantName'].dirty || restaurantForm.controls['restaurantName'].touched)" class="alert alert-danger">
+                  <div *ngIf="restaurantForm.controls['restaurantName'].errors.required">
+                        restaurant's name is required.
+                  </div>
+                </div>
+
              <!--adresse-->
                 <div class="form-group">
-                        <label>Adresse*</label>
-                            <input type="address"  class="form-control mb-4" placeholder="L'adresse de mon restaurant ici">
-                </div>        
+                        <label for="address">Adresse*</label>
+                            <input type="address"  class="form-control mb-4" placeholder="L'adresse de mon restaurant ici" formControlName="address">
+                </div>  
+                <div *ngIf="restaurantForm.controls['address'].invalid && (restaurantForm.controls['address'].dirty || restaurantForm.controls['address'].touched)" class="alert alert-danger">
+                  <div *ngIf="restaurantForm.controls['address'].errors.required">
+                         an address is required.
+                  </div>
+                </div>
+
              <!--ville-->
                 <div class="form-group">
-                        <label>Ville*</label>
-                            <input type="text"  class="form-control mb-4" placeholder="Votre ville ici">
+                        <label for="town">Ville*</label>
+                            <input type="text"  class="form-control mb-4" placeholder="Votre ville ici" formControlName="town">
                 </div>
+                <div *ngIf="restaurantForm.controls['town'].invalid && (restaurantForm.controls['town'].dirty || restaurantForm.controls['town'].touched)" class="alert alert-danger">
+                  <div *ngIf="restaurantForm.controls['town'].errors.required">
+                        a town is required.
+                  </div>
+                </div>
+
              <!--code postal-->
                 <div class="form-group">
-                        <label>Code postal*</label>
-                            <input type="number"  class="form-control mb-4" placeholder="Votre code postal ici">
+                        <label for="postalCode">Code postal*</label>
+                            <input type="number"  class="form-control mb-4" placeholder="Votre code postal ici" formControlName="postalCode">
                 </div>
+                <div *ngIf="restaurantForm.controls['postalCode'].invalid && (restaurantForm.controls['postalCode'].dirty || restaurantForm.controls['postalCode'].touched)" class="alert alert-danger">
+                  <div *ngIf="restaurantForm.controls['postalCode'].errors.required">
+                        postal code is required.
+                  </div>
+                </div>
+
              <!--numéro-->
                 <!-- <div class="form-group">
                         <label>Numéro du restaurant*</label>
@@ -72,8 +125,8 @@
                 </div> -->
              <!--spécialités-->
                 <div class="form-group">
-                        <label>Spécialités culinaires*</label>
-                            <select class="browser-default custom-select">
+                        <label for="specialities">Spécialités culinaires*</label>
+                            <select class="browser-default custom-select" formControlName="specialities">
                                 <option selected>Japonais</option>
                                 <option value="1">chinois</option>
                                 <option value="2">Burgers</option>
@@ -85,20 +138,32 @@
                                  <option value="8">autres spécialités</option>
                             </select>
                 </div>
+                <div *ngIf="restaurantForm.controls['specialities'].invalid && (restaurantForm.controls['specialities'].dirty || restaurantForm.controls['specialities'].touched)" class="alert alert-danger">
+                  <div *ngIf="restaurantForm.controls['specialities'].errors.required">
+                        a speciality is required.
+                  </div>
+                </div>
            
              <!--livraison-->
                 <div class="form-group">
-                        <label>Proposez vous de la livraison actuellement* ?</label>
-                            <select class="browser-default custom-select" >
+                        <label for="delivery">Proposez vous de la livraison actuellement* ?</label>
+                            <select class="browser-default custom-select" formControlName="delivery">
                                 <option selected>Livraison et à emporter</option>
                                 <option value="1">Non je ne propose pas de service de livraison</option>
                                 <option value="2">oui j'ai mon propre service de livraison</option>
                             </select>
           
                 </div>
+                <div *ngIf="restaurantForm.controls['delivery'].invalid && (restaurantForm.controls['delivery'].dirty || restaurantForm.controls['delivery'].touched)" class="alert alert-danger">
+                  <div *ngIf="restaurantForm.controls['delivery'].errors.required">
+                        an option is required.
+                  </div>
+                </div>
+
+                <!--livreurs-->
                 <div class="form-group">
-                    <label>Combien de livreurs avez-vous le week-end* ?</label>
-                        <select class="browser-default custom-select" >
+                    <label for="livreurs">Combien de livreurs avez-vous le week-end* ?</label>
+                        <select class="browser-default custom-select" formControlName="livreurs">
                             <option selected>--None--</option>
                             <option value="1">1 à 2</option>
                             <option value="2">3 à 4</option>
@@ -107,13 +172,19 @@
                         </select>
       
                  </div>
+                 <div *ngIf="restaurantForm.controls['livreurs'].invalid && (restaurantForm.controls['livreurs'].dirty || restaurantForm.controls['livreurs'].touched)" class="alert alert-danger">
+                  <div *ngIf="restaurantForm.controls['livreurs'].errors.required">
+                        an option is required.
+                  </div>
+                </div>
+
              <!--montant min-->
                 <!-- <div class="form-group">
                         <label>Montant minimal d'une commande*</label>
                             <input type="text" class="form-control mb-4" placeholder="Montant min d'une commande ">
                 </div> -->
               <!-- Sign in button -->
-               <button mdbBtn color="info" block="true" class="my-2" type="submit">Soumettre</button>       
+               <button [disabled]="restaurantForm.pristine || restaurantForm.invalid" mdbBtn color="info" block="true" class="my-2" type="submit">Soumettre</button>       
             </form>
         </div>
     </div>

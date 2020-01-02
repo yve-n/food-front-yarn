@@ -18,7 +18,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RestoSerivce } from './services/resto.service';
 import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
 import { BestSpecialitiesComponent } from './best-specialities/best-specialities.component';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MainpageComponent } from './mainpage/mainpage.component';
@@ -46,7 +45,8 @@ import { DashboardClientComponent } from './dashboard-client/dashboard-client.co
     ConnecterComponent,  
     ClientComponent,
     RestaurantOwnerComponent,
-    DashboardClientComponent 
+    DashboardClientComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -66,6 +66,8 @@ import { DashboardClientComponent } from './dashboard-client/dashboard-client.co
     RestoSerivce,
     BrowserAnimationsModule,
     MatSliderModule,
+    
+    
   ],
   bootstrap: [AppComponent]
 })
