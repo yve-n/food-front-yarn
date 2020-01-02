@@ -48,12 +48,7 @@ const appRoutes: Routes = [
   imports: [
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true,
-        scrollPositionRestoration: 'enabled',
-        anchorScrolling: 'enabled',
-        useHash: true,
-        onSameUrlNavigation: "reload",
-      } // <-- debugging purposes only
+      { enableTracing: true } // <-- debugging purposes only
     )
   ],
   exports: [RouterModule]
