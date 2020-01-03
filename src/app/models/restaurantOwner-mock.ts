@@ -1,3 +1,3 @@
-import { RestaurantOwner } from "./RestaurantOwner";
+import { RestaurantOwner } from "./restaurantOwner";
 
 export const RESTAURANTOWNERS: RestaurantOwner[] = [];

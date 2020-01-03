@@ -1,11 +1,11 @@
 import { Restaurant } from "./restaurant";
 import { Adresses } from "./address-mock";
 
-export const RESTAURANTS: Restaurant[] = [
+export const RESTAURANTS: any[] = [
   {
     id: 1,
     name: "Restaurant maBella",
-    /*address: {},*/
+    adresse: "9 Avenue du fastFood",
     logo: "lien_du_logo",
     duree_livraison: "1h",
     specialite: ["pizza", "burger", "tacos"],
@@ -48,7 +48,7 @@ export const RESTAURANTS: Restaurant[] = [
   {
     id: 6,
     name: "Pizza mood",
-    address: Address,
+    address: "112, Avenue Jean Francois Dupont",
     logo: "lien_du_logo",
     duree_livraison: "4h",
     takes: "take_away"
