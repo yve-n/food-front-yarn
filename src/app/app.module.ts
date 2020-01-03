@@ -53,7 +53,8 @@ import { RestoVilleComponent } from "./resto-ville/resto-ville.component";
     PageNotFoundComponent,
     CityComponent,
     SearchVilleComponent,
-    RestoVilleComponent
+    RestoVilleComponent,
+    DashboardClientComponent
   ],
   imports: [
     BrowserModule,
