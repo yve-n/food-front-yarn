@@ -1,6 +1,6 @@
 <!--Navbar-->
 <mdb-navbar
-  SideClass="navbar navbar-expand-lg navbar-dark  justify-content-between ie-nav fixed-top scrolling-navbar"
+  SideClass="navbar navbar-expand-lg navbar-dark justify-content-between ie-nav fixed-top scrolling-navbar"
   [containerInside]="false"
 >
   <!-- Navbar brand -->
@@ -47,13 +47,14 @@
         </a>
         <div
           *dropdownMenu
-          class="dropdown-menu dropdown dropdown-primary"
+          class="dropdown-menu dropdown dropdown-info"
           role="menu"
         >
           <a
             class="dropdown-item waves-light"
             mdbWavesEffect
             routerLink="/signup-client"
+            routerLinkActive="active"
           >
             En tant que client
           </a>

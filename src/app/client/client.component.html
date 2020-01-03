@@ -2,7 +2,12 @@
   <div class="row justify-content-center">
     <div class="col-lg-8">
       <!-- Default form login -->
-      <form class="border border-light p-5">
+      <form
+        novalidate
+        [formGroup]="clientForm"
+        (ngSubmit)="onSubmit(clientForm)"
+        class="border border-light p-5"
+      >
         <p class="h4 mb-4">Inscription</p>
 
         <div class="icon button">
@@ -36,26 +41,100 @@
           <div class="col-lg-1 text-center">ou</div>
           <div class="col-lg-5"><hr /></div>
         </div>
+        <!--prénom-->
+        <div class="form-group">
+          <label for="firstName">Prénom*</label>
+          <input
+            type="text"
+            class="form-control mb-4"
+            placeholder="Votre Prénom ici"
+            id="firstName"
+            formControlName="firstName"
+          />
+        </div>
+        <div
+          *ngIf="
+            clientForm.controls['firstName'].invalid &&
+            (clientForm.controls['firstName'].dirty ||
+              clientForm.controls['firstName'].touched)
+          "
+          class="alert alert-danger"
+        >
+          <div *ngIf="clientForm.controls['firstName'].errors.required">
+            firstName is required.
+          </div>
+        </div>
+        <!--nom-->
+        <div class="form-group">
+          <label for="lastName">Nom*</label>
+          <input
+            type="text"
+            class="form-control mb-4"
+            placeholder="Votre nom ici"
+            id="lastName"
+            formControlName="lastName"
+          />
+        </div>
+        <div
+          *ngIf="
+            clientForm.controls['lastName'].invalid &&
+            (clientForm.controls['lastName'].dirty ||
+              clientForm.controls['lastName'].touched)
+          "
+          class="alert alert-danger"
+        >
+          <div *ngIf="clientForm.controls['lastName'].errors.required">
+            lastName is required.
+          </div>
+        </div>
 
-        <input type="text" class="form-control mb-4" placeholder="Prénom" />
-
-        <input type="text" class="form-control mb-4" placeholder="Nom" />
         <!-- Email -->
-        <input
-          type="email"
-          id="defaultLoginFormEmail"
-          class="form-control mb-4"
-          placeholder="E-mail"
-        />
+        <div class="form-group">
+          <label for="email">Adresse mail*</label>
+          <input
+            type="email"
+            id="email"
+            class="form-control mb-4"
+            placeholder="Votre adresse mail ici"
+            formControlName="email"
+          />
+        </div>
+        <div
+          *ngIf="
+            clientForm.controls['email'].invalid &&
+            (clientForm.controls['email'].dirty ||
+              clientForm.controls['email'].touched)
+          "
+          class="alert alert-danger"
+        >
+          <div *ngIf="clientForm.controls['email'].errors.required">
+            email is required.
+          </div>
+        </div>
 
         <!-- Password -->
-        <input
-          type="password"
-          id="defaultLoginFormPassword"
-          class="form-control mb-4"
-          placeholder="Mot de passe"
-        />
-
+        <div class="form-group">
+          <label for="password">Mot de passe*</label>
+          <input
+            type="password"
+            id="password"
+            class="form-control mb-4"
+            placeholder="Votre mot de passe ici"
+            formControlName="password"
+          />
+        </div>
+        <div
+          *ngIf="
+            clientForm.controls['password'].invalid &&
+            (clientForm.controls['password'].dirty ||
+              clientForm.controls['password'].touched)
+          "
+          class="alert alert-danger"
+        >
+          <div *ngIf="clientForm.controls['password'].errors.required">
+            password is required.
+          </div>
+        </div>
         <!-- Default unchecked -->
         <mdb-checkbox [default]="true"
           >Si vous ne souhaitez pas recevoir des réductions super alléchantes ou
@@ -63,7 +142,14 @@
         >
 
         <!-- Sign in button -->
-        <button mdbBtn color="info" block="true" class="my-4" type="submit">
+        <button
+          [disabled]="clientForm.pristine || clientForm.invalid"
+          mdbBtn
+          color="info"
+          block="true"
+          class="my-4"
+          type="submit"
+        >
           s'inscrire
         </button>
 

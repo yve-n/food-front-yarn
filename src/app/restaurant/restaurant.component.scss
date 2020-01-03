@@ -1,15 +1,87 @@
 p {
-  font-size: 10px;
+  font-size: 12px;
 }
-.p-address-restaurant {
-  text-align: right;
+.jumbotron-fluid{
+  margin-top: 25px;
 }
+
 .p-card {
   margin-bottom: 1px;
 }
 
-.div-info-prix {
-  text-align: end;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
+.p-inline{
+  display:inline;
+}
+
+h6{
+  padding-top: 5px;
+}
+
+.font-10{
+  font-size: 10px;
+}
+
+.badge{
+  background-color: #ead9f0;
+  color: #3b1249;
+}
+
+@media (min-width: 721px ) {
+  .row {
+      position: relative;
+  }
+
+  .div-info-prix{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+ul{
+  list-style: none;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+li{
+  display: flex;
+}
+
+.ul-menus{
+  border-top: 1px solid #cacaca;
+}
+.li-menus{
+  border-bottom: 1px solid #cacaca;
+}
+
+mat-expansion-panel-header.mat-expansion-panel-header{
+  padding-left: 0px;
+}
+
+div.mat-expansion-panel-body {
+  padding-right: 4px;
+  padding-left: 0px;
+}
+
+// Classes
+.pull-left {
+  float: left !important;
+}
+.pull-right {
+  float: right !important;
+}
+
+.restaurant-page {
+  background: url("../../assets/main_page_pic.jpg") no-repeat center center;
+  background-size: cover;
+  height: 30vh;
+  margin-top: -50px;
+  margin-bottom: 50px;
+}
+
+.menu{
+  border: solid 1px black;
+  border-radius: 5px;
+  padding: 15px;
 }
