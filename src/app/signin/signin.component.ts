@@ -20,7 +20,7 @@ export class SigninComponent implements OnInit {
     });
   }
 
-  onSubmit({ value, valid }: { value: connectForm; valid: boolean }) {
+  onSubmit({ value, valid }: { value: any; valid: boolean }) {
     console.log(value, valid);
   }
 }

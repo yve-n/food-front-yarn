@@ -1,22 +1,21 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-lg-8">
+            <!-- Default form login -->
+              <form novalidate [formGroup]="restaurantForm"  (ngSubmit)="onSubmit(restaurantForm)" class="border border-light p-5">
 
-              <!-- Default form login -->
-            <form novalidate [formGroup]="restaurantForm"  (ngSubmit)="onSubmit(restaurantForm)" class="border border-light p-5">
-  
-                            <p class="h4 mb-4">Inscription</p>  
-            
+               <p class="h4 mb-4">Inscription</p>
+
                             <div class="icon button">
                                 <a button mdbBtn type="button" block="true" outline="true" color="default" mdbWavesEffect>
                                      <mdb-icon fab icon="google"></mdb-icon> sign in with google
-                                </a> 
+                                </a>
                                 <a button mdbBtn type="button" class="my-2" block="true" outline="true" color="default" mdbWavesEffect>
                                       <mdb-icon fab icon="facebook"></mdb-icon> sign in with facebook
                                 </a>
-             
+
                             </div>
-            
+
                             <div class="row">
                                  <div class="col-lg-5"> <hr> </div>
                                  <div class="col-lg-1 text-center"> ou </div>
@@ -89,7 +88,7 @@
                 <div class="form-group">
                         <label for="address">Adresse*</label>
                             <input type="address"  class="form-control mb-4" placeholder="L'adresse de mon restaurant ici" formControlName="address">
-                </div>  
+                </div>
                 <div *ngIf="restaurantForm.controls['address'].invalid && (restaurantForm.controls['address'].dirty || restaurantForm.controls['address'].touched)" class="alert alert-danger">
                   <div *ngIf="restaurantForm.controls['address'].errors.required">
                          an address is required.
@@ -143,7 +142,7 @@
                         a speciality is required.
                   </div>
                 </div>
-           
+
              <!--livraison-->
                 <div class="form-group">
                         <label for="delivery">Proposez vous de la livraison actuellement* ?</label>
@@ -152,7 +151,7 @@
                                 <option value="1">Non je ne propose pas de service de livraison</option>
                                 <option value="2">oui j'ai mon propre service de livraison</option>
                             </select>
-          
+
                 </div>
                 <div *ngIf="restaurantForm.controls['delivery'].invalid && (restaurantForm.controls['delivery'].dirty || restaurantForm.controls['delivery'].touched)" class="alert alert-danger">
                   <div *ngIf="restaurantForm.controls['delivery'].errors.required">
@@ -170,7 +169,7 @@
                             <option value="3">5 à 10</option>
                             <option value="4">10 ou plus</option>
                         </select>
-      
+
                  </div>
                  <div *ngIf="restaurantForm.controls['livreurs'].invalid && (restaurantForm.controls['livreurs'].dirty || restaurantForm.controls['livreurs'].touched)" class="alert alert-danger">
                   <div *ngIf="restaurantForm.controls['livreurs'].errors.required">
@@ -184,9 +183,8 @@
                             <input type="text" class="form-control mb-4" placeholder="Montant min d'une commande ">
                 </div> -->
               <!-- Sign in button -->
-               <button [disabled]="restaurantForm.pristine || restaurantForm.invalid" mdbBtn color="info" block="true" class="my-2" type="submit">Soumettre</button>       
+               <button [disabled]="restaurantForm.pristine || restaurantForm.invalid" mdbBtn color="info" block="true" class="my-2" type="submit">Soumettre</button>
             </form>
         </div>
     </div>
 </div>
-        
