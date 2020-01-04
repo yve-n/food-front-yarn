@@ -1,0 +1,18 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "firstName": "json-server",
+      "lastName": "typicode",
+      "email": "sam@gmail.com",
+      "password": "abcdef"
+    },
+    {
+      "id": 2,
+      "firstName": "json-server2",
+      "lastName": "typicode2",
+      "email": "sam2@gmail.com",
+      "password": "abcdefg"
+    }
+  ]
+}
