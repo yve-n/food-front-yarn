@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import { SignIn } from "../models/signin";
 
 @Component({
   selector: "app-signin",
@@ -7,20 +8,26 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
   styleUrls: ["./signin.component.scss"]
 })
 export class SigninComponent implements OnInit {
-  connectForm: FormGroup;
+  signinForm: FormGroup;
 
   constructor(private fb: FormBuilder) {}
 
   ngOnInit() {
-    this.connectForm = this.fb.group({
-      account: this.fb.group({
-        email: ["", Validators.required],
-        password: ["", Validators.required]
-      })
+    this.signinForm = this.fb.group({
+      email: ["", [Validators.required, Validators.email]],
+      password: ["", [Validators.required, Validators.minLength(8)]]
     });
   }
 
-  onSubmit({ value, valid }: { value: any; valid: boolean }) {
+  get email() {
+    return this.signinForm.get("email");
+  }
+
+  get password() {
+    return this.signinForm.get("password");
+  }
+
+  onSubmit({ value, valid }: { value: SignIn; valid: boolean }) {
     console.log(value, valid);
   }
 }
