@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
-
+import { Client } from "../models/client";
 @Component({
   selector: "app-client",
   templateUrl: "./client.component.html",
@@ -13,14 +13,26 @@ export class ClientComponent implements OnInit {
 
   ngOnInit() {
     this.clientForm = this.fb.group({
-      firstName: ["", Validators.required],
-      lastName: ["", Validators.required],
-      email: ["", Validators.required],
-      password: ["", Validators.required]
+      firstName: ["", [Validators.required, Validators.minLength(3)]],
+      lastName: ["", [Validators.required, Validators.minLength(3)]],
+      email: ["", [Validators.required, Validators.email]],
+      password: ["", [Validators.required, Validators.minLength(8)]]
     });
   }
+  get email() {
+    return this.clientForm.get("email");
+  }
+  get password() {
+    return this.clientForm.get("password");
+  }
+  get lastName() {
+    return this.clientForm.get("lastName");
+  }
+  get firstName() {
+    return this.clientForm.get("firstName");
+  }
 
-  onSubmit({ value, valid }: { value: Validators; valid: boolean }) {
+  onSubmit({ value, valid }: { value: Client; valid: boolean }) {
     console.log(value, valid);
   }
 }
