@@ -6,9 +6,9 @@
         novalidate
         [formGroup]="restaurantForm"
         (ngSubmit)="onSubmit(restaurantForm)"
-        class="border border-light p-5"
+        class="border border-light p-4"
       >
-        <p class="h4 mb-4">Inscription</p>
+        <p class="h4 mb-3 px-3 text-center text-monospace">Inscription</p>
 
         <div class="icon button">
           <a
@@ -17,10 +17,10 @@
             type="button"
             block="true"
             outline="true"
-            color="default"
+            color="primary"
             mdbWavesEffect
           >
-            <mdb-icon fab icon="google"></mdb-icon> sign in with google
+            <mdb-icon fab icon="google"></mdb-icon> S'inscrire avec google
           </a>
           <a
             button
@@ -29,10 +29,10 @@
             class="my-2"
             block="true"
             outline="true"
-            color="default"
+            color="primary"
             mdbWavesEffect
           >
-            <mdb-icon fab icon="facebook"></mdb-icon> sign in with facebook
+            <mdb-icon fab icon="facebook"></mdb-icon> S'inscrire avec facebook
           </a>
         </div>
 
@@ -42,205 +42,132 @@
           <div class="col-lg-5"><hr /></div>
         </div>
         <!--prénom-->
-        <div class="form-group">
-          <label for="firstName">Prénom*</label>
-          <input
-            type="text"
-            class="form-control mb-4"
-            placeholder="Votre prénom ici"
-            formControlName="firstName"
-          />
-        </div>
-        <div
-          *ngIf="
-            restaurantForm.controls['firstName'].invalid &&
-            (restaurantForm.controls['firstName'].dirty ||
-              restaurantForm.controls['firstName'].touched)
-          "
-          class="alert alert-danger"
-        >
-          <div *ngIf="restaurantForm.controls['firstName'].errors.required">
-            firstName is required.
+        <div class="md-form md-outline form-lg">
+          <input mdbInput mdbValidate id="firstName" class="form-control form-control-lg" type="text" formControlName="firstName">
+          <label for="firstName">Prénom</label>
+
+          <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="text-danger">
+            <small *ngIf="firstName.errors.required">
+              Prénom obligatoire.
+            </small>
+            <small *ngIf="firstName.errors.minlength">
+              Le prénom doit avoir au moins 3 caractères.
+            </small>
           </div>
         </div>
-
         <!--Nom-->
-        <div class="form-group">
-          <label for="lastName">Nom*</label>
-          <input
-            type="text"
-            class="form-control mb-4"
-            placeholder="Votre nom ici"
-            formControlName="lastName"
-          />
-        </div>
-        <div
-          *ngIf="
-            restaurantForm.controls['lastName'].invalid &&
-            (restaurantForm.controls['lastName'].dirty ||
-              restaurantForm.controls['lastName'].touched)
-          "
-          class="alert alert-danger"
-        >
-          <div *ngIf="restaurantForm.controls['lastName'].errors.required">
-            lastName is required.
+        <div class="md-form md-outline form-lg">
+          <input mdbInput mdbValidate id="lastName" class="form-control form-control-lg" type="text" formControlName="lastName">
+          <label for="lastName">Nom</label>
+
+          <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)" class="text-danger">
+            <small *ngIf="lastName.errors.required">
+              Le nom est obligatoire.
+            </small>
+            <small *ngIf="lastName.errors.minlength">
+              Le nom doit avoir au moins 3 caractères.
+            </small>
           </div>
         </div>
 
         <!-- Email -->
-        <div class="form-group">
-          <label for="email">Email*</label>
-          <input
-            type="email"
-            id="defaultLoginFormEmail"
-            class="form-control mb-4"
-            placeholder="Votre adresse mail ici"
-            formControlName="email"
-          />
-        </div>
-        <div
-          *ngIf="
-            restaurantForm.controls['email'].invalid &&
-            (restaurantForm.controls['email'].dirty ||
-              restaurantForm.controls['email'].touched)
-          "
-          class="alert alert-danger"
-        >
-          <div *ngIf="restaurantForm.controls['email'].errors.required">
-            email is required.
+        <div class="md-form md-outline form-lg">
+          <input mdbInput mdbValidate name="email" type="email" id="email" class="form-control form-control-lg" formControlName="email">
+          <label for="email">Adresse mail</label>
+
+          <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
+            <small *ngIf="email.errors.required">
+              L'adresse e-mail est obligatoire.
+            </small>
+            <small *ngIf="email.errors.email">
+              Saisissez une adresse e-mail valide
+            </small>
           </div>
+        </div>
+
+          <!--password-->
+          <!-- Outline validation input -->
+        <div class="md-form md-outline form-lg">
+            <input mdbInput mdbValidate type="password" id="password" class="form-control form-control-lg" formControlName="password">
+            <label for="password">Mot de passe</label>
+            <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+              <small *ngIf="password.errors.required">
+                Le mot de passe est obligatoire.
+              </small>
+              <small *ngIf="password.errors.minlength">
+                Utilisez 8 caractères ou plus pour votre mot de passe.
+              </small>
+            </div>
         </div>
 
         <!--phone-->
-        <div class="form-group">
-          <label for="number">Téléphone portable*</label>
-          <input
-            type="number"
-            class="form-control mb-4"
-            placeholder="votre numéro ici"
-            formControlName="number"
-          />
-        </div>
-        <div
-          *ngIf="
-            restaurantForm.controls['number'].invalid &&
-            (restaurantForm.controls['number'].dirty ||
-              restaurantForm.controls['number'].touched)
-          "
-          class="alert alert-danger"
-        >
-          <div *ngIf="restaurantForm.controls['number'].errors.required">
-            a phone number is required.
+        <div class="md-form md-outline form-lg">
+          <input mdbInput mdbValidate id="number" class="form-control form-control-lg" type="number" formControlName="number">
+          <label for="number">Numéro de télephone</label>
+
+          <div *ngIf="number.invalid && (number.dirty || number.touched)" class="text-danger">
+            <small *ngIf="number.errors.required">
+              Numéro de télephone obligatoire.
+            </small>
           </div>
         </div>
-
-        <!-- Password -->
-        <!-- <div class="form-group">
-                         <label>Mot de passe*</label>
-                            <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Votre mot de passe">
-                </div> -->
         <!--nom du restaurant-->
-        <div class="form-group">
-          <label for="restaurantName">Nom de mon restaurant*</label>
-          <input
-            type="text"
-            class="form-control mb-4"
-            placeholder=" Le nom de mon restaurant ici"
-            formControlName="restaurantName"
-          />
-        </div>
-        <div
-          *ngIf="
-            restaurantForm.controls['restaurantName'].invalid &&
-            (restaurantForm.controls['restaurantName'].dirty ||
-              restaurantForm.controls['restaurantName'].touched)
-          "
-          class="alert alert-danger"
-        >
-          <div
-            *ngIf="restaurantForm.controls['restaurantName'].errors.required"
-          >
-            restaurant's name is required.
+        <div class="md-form md-outline form-lg">
+          <input mdbInput mdbValidate id="restaurantName" class="form-control form-control-lg" type="text" formControlName="restaurantName">
+          <label for="restaurantName">Nom de mon restaurant</label>
+
+          <div *ngIf="restaurantName.invalid && (restaurantName.dirty || restaurantName.touched)" class="text-danger">
+            <small *ngIf="restaurantName.errors.required">
+              Le nom de mon restaurant est obligatoire.
+            </small>
+            <small *ngIf="restaurantName.errors.minlength">
+              Le nom doit avoir au moins 3 caractères.
+            </small>
           </div>
         </div>
 
         <!--adresse-->
-        <div class="form-group">
-          <label for="address">Adresse*</label>
-          <input
-            type="address"
-            class="form-control mb-4"
-            placeholder="L'adresse de mon restaurant ici"
-            formControlName="address"
-          />
+        <div class="md-form md-outline form-lg">
+          <input mdbInput mdbValidate id="address"
+           class="form-control form-control-lg"
+           type="address"
+          formControlName="address">
+          <label for="address">Adresse</label>
         </div>
-        <div
-          *ngIf="
-            restaurantForm.controls['address'].invalid &&
-            (restaurantForm.controls['address'].dirty ||
-              restaurantForm.controls['address'].touched)
-          "
-          class="alert alert-danger"
-        >
-          <div *ngIf="restaurantForm.controls['address'].errors.required">
-            an address is required.
-          </div>
+        <div *ngIf="address.invalid && (address.dirty || address.touched)" class="text-danger">
+          <small *ngIf="address.errors.required">
+            L'adresse est obligatoire.
+          </small>
         </div>
 
         <!--ville-->
-        <div class="form-group">
-          <label for="town">Ville*</label>
-          <input
-            type="text"
-            class="form-control mb-4"
-            placeholder="Votre ville ici"
-            formControlName="town"
-          />
-        </div>
-        <div
-          *ngIf="
-            restaurantForm.controls['town'].invalid &&
-            (restaurantForm.controls['town'].dirty ||
-              restaurantForm.controls['town'].touched)
-          "
-          class="alert alert-danger"
-        >
-          <div *ngIf="restaurantForm.controls['town'].errors.required">
-            a town is required.
+        <div class="md-form md-outline form-lg">
+          <input mdbInput mdbValidate id="town" class="form-control form-control-lg" type="text" formControlName="town">
+          <label for="town">Ville</label>
+
+          <div *ngIf="town.invalid && (town.dirty || town.touched)" class="text-danger">
+            <small *ngIf="town.errors.required">
+              La ville est obligatoire.
+            </small>
+            <small *ngIf="town.errors.minlength">
+              La ville doit avoir au moins 3 caractères.
+            </small>
           </div>
         </div>
-
         <!--code postal-->
-        <div class="form-group">
-          <label for="postalCode">Code postal*</label>
-          <input
-            type="number"
-            class="form-control mb-4"
-            placeholder="Votre code postal ici"
-            formControlName="postalCode"
-          />
-        </div>
-        <div
-          *ngIf="
-            restaurantForm.controls['postalCode'].invalid &&
-            (restaurantForm.controls['postalCode'].dirty ||
-              restaurantForm.controls['postalCode'].touched)
-          "
-          class="alert alert-danger"
-        >
-          <div *ngIf="restaurantForm.controls['postalCode'].errors.required">
-            postal code is required.
+        <div class="md-form md-outline form-lg">
+          <input mdbInput mdbValidate id="postalCode" class="form-control form-control-lg" type="number" formControlName="postalCode">
+          <label for="postalCode">Code postal</label>
+
+          <div *ngIf="postalCode.invalid && (postalCode.dirty || postalCode.touched)" class="text-danger">
+            <small *ngIf="postalCode.errors.required">
+              Le code postal est obligatoire.
+            </small>
           </div>
         </div>
-
-        <!--numéro-->
-        <!-- <div class="form-group">
-                        <label>Numéro du restaurant*</label>
-                            <input type="number"  class="form-control mb-4" placeholder="Numéro du restaurant">
-                </div> -->
         <!--spécialités-->
-        <div class="form-group">
-          <label for="specialities">Spécialités culinaires*</label>
+        <div class="md-form md-outline form-lg">
+          <label for="specialities">Spécialités culinaires</label>
           <select
             class="browser-default custom-select"
             formControlName="specialities"
@@ -256,23 +183,16 @@
             <option value="8">autres spécialités</option>
           </select>
         </div>
-        <div
-          *ngIf="
-            restaurantForm.controls['specialities'].invalid &&
-            (restaurantForm.controls['specialities'].dirty ||
-              restaurantForm.controls['specialities'].touched)
-          "
-          class="alert alert-danger"
-        >
-          <div *ngIf="restaurantForm.controls['specialities'].errors.required">
-            a speciality is required.
-          </div>
+        <div *ngIf="specialities.invalid && (specialities.dirty || specialities.touched)" class="text-danger">
+          <small *ngIf="specialities.errors.required">
+            Choisissez une spécialité.
+          </small>
         </div>
 
         <!--livraison-->
-        <div class="form-group">
+        <div class="md-form md-outline form-lg">
           <label for="delivery"
-            >Proposez vous de la livraison actuellement* ?</label
+            >Proposez vous de la livraison actuellement ?</label
           >
           <select
             class="browser-default custom-select"
@@ -285,23 +205,16 @@
             <option value="2">oui j'ai mon propre service de livraison</option>
           </select>
         </div>
-        <div
-          *ngIf="
-            restaurantForm.controls['delivery'].invalid &&
-            (restaurantForm.controls['delivery'].dirty ||
-              restaurantForm.controls['delivery'].touched)
-          "
-          class="alert alert-danger"
-        >
-          <div *ngIf="restaurantForm.controls['delivery'].errors.required">
-            an option is required.
-          </div>
+        <div *ngIf="delivery.invalid && (delivery.dirty || delivery.touched)" class="text-danger">
+          <small *ngIf="delivery.errors.required">
+            Choisissez un service.
+          </small>
         </div>
 
         <!--livreurs-->
-        <div class="form-group">
+        <div class="md-form md-outline form-lg">
           <label for="livreurs"
-            >Combien de livreurs avez-vous le week-end* ?</label
+            >Combien de livreurs avez-vous le week-end?</label
           >
           <select
             class="browser-default custom-select"
@@ -314,24 +227,11 @@
             <option value="4">10 ou plus</option>
           </select>
         </div>
-        <div
-          *ngIf="
-            restaurantForm.controls['livreurs'].invalid &&
-            (restaurantForm.controls['livreurs'].dirty ||
-              restaurantForm.controls['livreurs'].touched)
-          "
-          class="alert alert-danger"
-        >
-          <div *ngIf="restaurantForm.controls['livreurs'].errors.required">
-            an option is required.
-          </div>
+        <div *ngIf="livreurs.invalid && (livreurs.dirty || livreurs.touched)" class="text-danger">
+          <small *ngIf="livreurs.errors.required">
+            Choisissez une option.
+          </small>
         </div>
-
-        <!--montant min-->
-        <!-- <div class="form-group">
-                        <label>Montant minimal d'une commande*</label>
-                            <input type="text" class="form-control mb-4" placeholder="Montant min d'une commande ">
-                </div> -->
         <!-- Sign in button -->
         <button
           [disabled]="restaurantForm.pristine || restaurantForm.invalid"
