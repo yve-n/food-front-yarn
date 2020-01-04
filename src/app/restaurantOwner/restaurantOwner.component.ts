@@ -8,6 +8,7 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 })
 export class RestaurantOwnerComponent implements OnInit {
   restaurantForm: FormGroup;
+
   constructor(private fb: FormBuilder) {}
 
   ngOnInit() {
@@ -25,7 +26,8 @@ export class RestaurantOwnerComponent implements OnInit {
       livreurs: ["", Validators.required]
     });
   }
-  onSubmit({ value, valid }: { value: any; valid: boolean }) {
+
+  onSubmit({ value, valid }: { value: Validators; valid: boolean }) {
     console.log(value, valid);
   }
 }

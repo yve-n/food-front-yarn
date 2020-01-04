@@ -8,6 +8,7 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 })
 export class ClientComponent implements OnInit {
   clientForm: FormGroup;
+
   constructor(private fb: FormBuilder) {}
 
   ngOnInit() {
@@ -18,7 +19,8 @@ export class ClientComponent implements OnInit {
       password: ["", Validators.required]
     });
   }
-  onSubmit({ value, valid }: { value: any; valid: boolean }) {
+
+  onSubmit({ value, valid }: { value: Validators; valid: boolean }) {
     console.log(value, valid);
   }
 }
