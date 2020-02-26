@@ -1,0 +1,33 @@
+<div class="">
+    <a routerLink="/restaurant/{{restaurantId}}">
+        <!-- <a [routerLink]=["'/restaurant', restaurantId"]> -->
+        <div class="list-restaurant">              
+            <div class="row">
+                <div class="col-sm-3">
+                    <img src="../../assets/images/image_burger.jpg" alt="image_restaurant" class="img-fluid image-restaurant" width="">
+                </div>
+
+                <div class="col-sm-1 div-logo-restaurant">
+                    <img src="../../assets/images/image_burger.jpg" alt="logo_restaurant" class="img-fluid rounded mx-auto d-block text-center" width="50px">
+                </div>
+                    
+                <div class="col-sm-4 div-info-restaurant">
+                    <h5>{{ name }}</h5>
+                    <p class="p-address">{{ adresse }}</p>
+                    <!-- <p class="p-speciality">{{ specialite }}</p> -->
+                    <p class="p-speciality"><span class="" *ngFor="let item of specialite">  {{ item  }} &nbsp; <b class="middle-dot">&#183;</b>  </span></p> 
+                    <!-- <p class="p-take"> {{ takes }} </p> -->
+                    <p class="p-note"> <mdb-icon fas icon="star"></mdb-icon> <mdb-icon fas icon="star"></mdb-icon> <mdb-icon fas icon="star"></mdb-icon> <mdb-icon fas icon="star"></mdb-icon> <mdb-icon fas icon="star"></mdb-icon> </p>
+                </div>
+                
+                <div class="col-sm-4 params">
+                    <p class="p-params-1"> <mdb-icon fab icon="whmcs"></mdb-icon> 2 jour pour 1</p>
+                    <p class="p-params-2"> <mdb-icon fas icon="motorcycle"></mdb-icon> livraison gratuite <b class="middle-dot">&#183;</b> Minimum 5 &euro; </p>
+                    <p class="p-params-3"> <mdb-icon fas icon="stopwatch"></mdb-icon> 30 a 45 min</p>
+                </div>
+            </div>
+                
+        </div>
+        
+    </a>
+</div>

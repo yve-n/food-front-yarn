@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.main-page {
+  background: url("./assets/main_page_pic.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  margin-top: -50px;
+}
+
+.navbar .nav-link.active {
+  background-color: #7a65f0;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.navbar {
+  background-color: #6252c0;
+}
+
+.top-nav-collapse {
+  background-color: #6351ce;
+}
+ .dropdown-item.active,
+.dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #7a65f0;
+}
+
+.navbar .dropdown-menu a.active {
+  color: #fff;
+}
+@media only screen and (max-width: 768px) {
+  .navbar {
+    background-color: #6351ce;
+  }
+}

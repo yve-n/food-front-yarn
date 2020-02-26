@@ -1,0 +1,249 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <!-- Default form login -->
+      <form
+        novalidate
+        [formGroup]="restaurantForm"
+        (ngSubmit)="onSubmit(restaurantForm)"
+        class="border border-light p-4"
+      >
+        <p class="h4 mb-3 px-3 text-center text-monospace">Inscription</p>
+
+        <div class="icon button">
+          <a
+            button
+            mdbBtn
+            type="button"
+            block="true"
+            outline="true"
+            color="primary"
+            mdbWavesEffect
+          >
+            <mdb-icon fab icon="google"></mdb-icon> S'inscrire avec google
+          </a>
+          <a
+            button
+            mdbBtn
+            type="button"
+            class="my-2"
+            block="true"
+            outline="true"
+            color="primary"
+            mdbWavesEffect
+          >
+            <mdb-icon fab icon="facebook"></mdb-icon> S'inscrire avec facebook
+          </a>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-5"><hr /></div>
+          <div class="col-lg-1 text-center">ou</div>
+          <div class="col-lg-5"><hr /></div>
+        </div>
+        <!--prénom-->
+        <div class="md-form md-outline form-lg">
+          <input mdbInput mdbValidate id="firstName" class="form-control form-control-lg" type="text" formControlName="firstName">
+          <label for="firstName">Prénom</label>
+
+          <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="text-danger">
+            <small *ngIf="firstName.errors.required">
+              Prénom obligatoire.
+            </small>
+            <small *ngIf="firstName.errors.minlength">
+              Le prénom doit avoir au moins 3 caractères.
+            </small>
+          </div>
+        </div>
+        <!--Nom-->
+        <div class="md-form md-outline form-lg">
+          <input mdbInput mdbValidate id="lastName" class="form-control form-control-lg" type="text" formControlName="lastName">
+          <label for="lastName">Nom</label>
+
+          <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)" class="text-danger">
+            <small *ngIf="lastName.errors.required">
+              Le nom est obligatoire.
+            </small>
+            <small *ngIf="lastName.errors.minlength">
+              Le nom doit avoir au moins 3 caractères.
+            </small>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="md-form md-outline form-lg">
+          <input mdbInput mdbValidate name="email" type="email" id="email" class="form-control form-control-lg" formControlName="email">
+          <label for="email">Adresse mail</label>
+
+          <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
+            <small *ngIf="email.errors.required">
+              L'adresse e-mail est obligatoire.
+            </small>
+            <small *ngIf="email.errors.email">
+              Saisissez une adresse e-mail valide
+            </small>
+          </div>
+        </div>
+
+          <!--password-->
+          <!-- Outline validation input -->
+        <div class="md-form md-outline form-lg">
+            <input mdbInput mdbValidate type="password" id="password" class="form-control form-control-lg" formControlName="password">
+            <label for="password">Mot de passe</label>
+            <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+              <small *ngIf="password.errors.required">
+                Le mot de passe est obligatoire.
+              </small>
+              <small *ngIf="password.errors.minlength">
+                Utilisez 8 caractères ou plus pour votre mot de passe.
+              </small>
+            </div>
+        </div>
+
+        <!--phone-->
+        <div class="md-form md-outline form-lg">
+          <input mdbInput mdbValidate id="number" class="form-control form-control-lg" type="number" formControlName="number">
+          <label for="number">Numéro de télephone</label>
+
+          <div *ngIf="number.invalid && (number.dirty || number.touched)" class="text-danger">
+            <small *ngIf="number.errors.required">
+              Numéro de télephone obligatoire.
+            </small>
+          </div>
+        </div>
+        <!--nom du restaurant-->
+        <div class="md-form md-outline form-lg">
+          <input mdbInput mdbValidate id="restaurantName" class="form-control form-control-lg" type="text" formControlName="restaurantName">
+          <label for="restaurantName">Nom de mon restaurant</label>
+
+          <div *ngIf="restaurantName.invalid && (restaurantName.dirty || restaurantName.touched)" class="text-danger">
+            <small *ngIf="restaurantName.errors.required">
+              Le nom de mon restaurant est obligatoire.
+            </small>
+            <small *ngIf="restaurantName.errors.minlength">
+              Le nom doit avoir au moins 3 caractères.
+            </small>
+          </div>
+        </div>
+
+        <!--adresse-->
+        <div class="md-form md-outline form-lg">
+          <input mdbInput mdbValidate id="address"
+           class="form-control form-control-lg"
+           type="address"
+          formControlName="address">
+          <label for="address">Adresse</label>
+        </div>
+        <div *ngIf="address.invalid && (address.dirty || address.touched)" class="text-danger">
+          <small *ngIf="address.errors.required">
+            L'adresse est obligatoire.
+          </small>
+        </div>
+
+        <!--ville-->
+        <div class="md-form md-outline form-lg">
+          <input mdbInput mdbValidate id="town" class="form-control form-control-lg" type="text" formControlName="town">
+          <label for="town">Ville</label>
+
+          <div *ngIf="town.invalid && (town.dirty || town.touched)" class="text-danger">
+            <small *ngIf="town.errors.required">
+              La ville est obligatoire.
+            </small>
+            <small *ngIf="town.errors.minlength">
+              La ville doit avoir au moins 3 caractères.
+            </small>
+          </div>
+        </div>
+        <!--code postal-->
+        <div class="md-form md-outline form-lg">
+          <input mdbInput mdbValidate id="postalCode" class="form-control form-control-lg" type="number" formControlName="postalCode">
+          <label for="postalCode">Code postal</label>
+
+          <div *ngIf="postalCode.invalid && (postalCode.dirty || postalCode.touched)" class="text-danger">
+            <small *ngIf="postalCode.errors.required">
+              Le code postal est obligatoire.
+            </small>
+          </div>
+        </div>
+        <!--spécialités-->
+        <div class="md-form md-outline form-lg">
+          <label for="specialities">Spécialités culinaires</label>
+          <select
+            class="browser-default custom-select"
+            formControlName="specialities"
+          >
+            <option selected>Japonais</option>
+            <option value="1">chinois</option>
+            <option value="2">Burgers</option>
+            <option value="3">indien-pakistanais</option>
+            <option value="4">libanais</option>
+            <option value="5">creperies</option>
+            <option value="6">Africain</option>
+            <option value="7">Pizza, Italien</option>
+            <option value="8">autres spécialités</option>
+          </select>
+        </div>
+        <div *ngIf="specialities.invalid && (specialities.dirty || specialities.touched)" class="text-danger">
+          <small *ngIf="specialities.errors.required">
+            Choisissez une spécialité.
+          </small>
+        </div>
+
+        <!--livraison-->
+        <div class="md-form md-outline form-lg">
+          <label for="delivery"
+            >Proposez vous de la livraison actuellement ?</label
+          >
+          <select
+            class="browser-default custom-select"
+            formControlName="delivery"
+          >
+            <option selected>Livraison et à emporter</option>
+            <option value="1"
+              >Non je ne propose pas de service de livraison</option
+            >
+            <option value="2">oui j'ai mon propre service de livraison</option>
+          </select>
+        </div>
+        <div *ngIf="delivery.invalid && (delivery.dirty || delivery.touched)" class="text-danger">
+          <small *ngIf="delivery.errors.required">
+            Choisissez un service.
+          </small>
+        </div>
+
+        <!--livreurs-->
+        <div class="md-form md-outline form-lg">
+          <label for="livreurs"
+            >Combien de livreurs avez-vous le week-end?</label
+          >
+          <select
+            class="browser-default custom-select"
+            formControlName="livreurs"
+          >
+            <option selected>--None--</option>
+            <option value="1">1 à 2</option>
+            <option value="2">3 à 4</option>
+            <option value="3">5 à 10</option>
+            <option value="4">10 ou plus</option>
+          </select>
+        </div>
+        <div *ngIf="livreurs.invalid && (livreurs.dirty || livreurs.touched)" class="text-danger">
+          <small *ngIf="livreurs.errors.required">
+            Choisissez une option.
+          </small>
+        </div>
+        <!-- Sign in button -->
+        <button
+          [disabled]="restaurantForm.pristine || restaurantForm.invalid"
+          mdbBtn
+          color="info"
+          block="true"
+          class="my-2"
+          type="submit"
+        >
+          Soumettre
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

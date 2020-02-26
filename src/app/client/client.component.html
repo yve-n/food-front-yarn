@@ -1,0 +1,102 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <!-- Default form login -->
+      <form novalidate [formGroup]="clientForm" (ngSubmit)="onSubmit(clientForm)" class="border border-light p-4">
+        <p class="h4 mb-3 px-3 text-center text-monospace" >Inscription</p>
+
+        <div class="icon button">
+          <a button mdbBtn type="button" block="true" outline="true" color="primary" mdbWavesEffect>
+            <mdb-icon fab icon="google"></mdb-icon> S'inscrire avec google
+          </a>
+          <a button mdbBtn type="button" block="true" class="my-2" outline="true" color="primary" mdbWavesEffect>
+            <mdb-icon fab icon="facebook"></mdb-icon> S'inscrire avec facebook
+          </a>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-5">
+            <hr />
+          </div>
+          <div class="col-lg-1 text-center">ou</div>
+          <div class="col-lg-5">
+            <hr />
+          </div>
+        </div>
+        <!--prénom-->
+        <!-- Large outline input -->
+        <div class="md-form md-outline form-lg">
+          <input mdbInput mdbValidate id="firstName" class="form-control form-control-lg" type="text" formControlName="firstName">
+          <label for="firstName">Prénom</label>
+
+          <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="text-danger">
+            <small *ngIf="firstName.errors.required">
+              Prénom obligatoire.
+            </small>
+            <small *ngIf="firstName.errors.minlength">
+              Le prénom doit avoir au moins 3 caractères.
+            </small>
+          </div>
+        </div>
+        <!--nom-->
+        <div class="md-form md-outline form-lg">
+          <input mdbInput mdbValidate id="lastName" class="form-control form-control-lg" type="text" formControlName="lastName">
+          <label for="lastName">Nom</label>
+
+          <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)" class="text-danger">
+            <small *ngIf="lastName.errors.required">
+              Le nom est obligatoire.
+            </small>
+            <small *ngIf="lastName.errors.minlength">
+              Le nom doit avoir au moins 3 caractères.
+            </small>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <!-- Outline validation input -->
+        <div class="md-form md-outline form-lg">
+          <input mdbInput mdbValidate name="email" type="email" id="email" class="form-control form-control-lg" formControlName="email">
+          <label for="email">Adresse mail</label>
+
+          <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
+            <small *ngIf="email.errors.required">
+              L'adresse e-mail est obligatoire.
+            </small>
+            <small *ngIf="email.errors.email">
+              Saisissez une adresse e-mail valide
+            </small>
+          </div>
+        </div>
+
+        <!--password-->
+        <!-- Outline validation input -->
+        <div class="md-form md-outline form-lg">
+          <input mdbInput mdbValidate type="password" id="password" class="form-control form-control-lg" formControlName="password">
+          <label for="password">Mot de passe</label>
+          <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+            <small *ngIf="password.errors.required">
+              Le mot de passe est obligatoire.
+            </small>
+            <small *ngIf="password.errors.minlength">
+              Utilisez 8 caractères ou plus pour votre mot de passe.
+            </small>
+          </div>
+        </div>
+        <!-- Default unchecked -->
+        <mdb-checkbox [default]="true">Si vous ne souhaitez pas recevoir des réductions super alléchantes ou
+          de délicieuses offres exclusives, cochez cette case</mdb-checkbox>
+
+        <!-- Sign in button -->
+        <button [disabled]="clientForm.pristine || clientForm.invalid" mdbBtn color="info" block="true" class="my-4" type="submit">
+          s'inscrire
+        </button>
+
+        <p class="text-center">
+          vous avez déja un compte?
+          <a routerLink="/signin" routerLinkActive="active">connexion</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>

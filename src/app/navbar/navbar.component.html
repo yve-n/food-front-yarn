@@ -1,0 +1,87 @@
+<!--Navbar-->
+<mdb-navbar
+  SideClass="navbar navbar-expand-lg navbar-dark justify-content-between ie-nav fixed-top scrolling-navbar"
+  [containerInside]="false"
+>
+  <!-- Navbar brand -->
+  <mdb-navbar-brand>
+    <a class="navbar-brand" routerLink="/">
+      <strong>FoodApp</strong>
+    </a>
+  </mdb-navbar-brand>
+
+  <!-- Links -->
+  <links>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a
+          class="nav-link waves-light"
+          routerLink="/home"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          mdbWavesEffect
+        >
+          Accueil<span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link waves-light"
+          routerLink="/signin"
+          routerLinkActive="active"
+          mdbWavesEffect
+        >
+          Connexion
+        </a>
+      </li>
+      <!-- Dropdown -->
+      <li class="nav-item dropdown" dropdown>
+        <a
+          dropdownToggle
+          mdbWavesEffect
+          type="button"
+          class="nav-link dropdown-toggle waves-light"
+          mdbWavesEffect
+        >
+          Créer un compte<span class="caret"></span>
+        </a>
+        <div
+          *dropdownMenu
+          class="dropdown-menu dropdown dropdown-info"
+          role="menu"
+        >
+          <a
+            class="dropdown-item waves-light"
+            mdbWavesEffect
+            routerLink="/signup-client"
+            routerLinkActive="active"
+          >
+            En tant que client
+          </a>
+          <div class="divider dropdown-divider"></div>
+          <a
+            class="dropdown-item waves-light"
+            mdbWavesEffect
+            routerLink="/signup-restaurantOwner"
+            routerLinkActive="active"
+          >
+            En tant que restaurateur
+          </a>
+        </div>
+      </li>
+      <!-- Dropdown -->
+      <li class="nav-item waves-light">
+        <a
+          class="nav-link waves-light help"
+          routerLink="/help"
+          routerLinkActive="active"
+          mdbWavesEffect
+          (click)="navbar.hide()"
+        >
+          <mdb-icon fas icon="cog"></mdb-icon> Aide
+        </a>
+      </li>
+    </ul>
+  </links>
+  <!-- Links -->
+</mdb-navbar>
